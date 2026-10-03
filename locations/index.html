@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Panera Near Me: Find Locations &amp; Hours (2026)</title>
+    <meta name="description" content="Find your nearest Panera Bread: search any ZIP or city, or use your location. Check hours before you go, since they vary by bakery-cafe. Independent 2026 guide." />
+    <meta name="theme-color" content="#FAF6EF" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#14110B" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Panera Near Me: Find Locations &amp; Hours (2026)" />
+    <meta property="og:description" content="Search any ZIP or city, or use your location, to find the nearest Panera Bread: with hours, holiday notes, and before-you-go checklist." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What are Panera's typical hours?","acceptedAnswer":{"@type":"Answer","text":"Most Panera bakery-cafes open around 6 to 7am and close around 8 to 9pm, but hours vary by location. Always confirm your store's hours on its Google Maps listing or Panera's official site before you go."}},
+        {"@type":"Question","name":"How do I find the closest Panera to me?","acceptedAnswer":{"@type":"Answer","text":"Use the finder above: type your ZIP code or city and search, or tap 'Use my location' for results around your current position. Each map listing shows address, hours, and whether the cafe has drive-thru, curbside pickup, or delivery."}},
+        {"@type":"Question","name":"Does every Panera have a drive-thru?","acceptedAnswer":{"@type":"Answer","text":"No. Drive-thru, curbside pickup, and delivery availability differ from cafe to cafe. Check the listing for the location you plan to visit."}},
+        {"@type":"Question","name":"Does Panera deliver?","acceptedAnswer":{"@type":"Answer","text":"Yes. Panera offers delivery through its official website and app as well as third-party services, but availability and fees vary by location."}},
+        {"@type":"Question","name":"Are Panera's prices the same everywhere?","acceptedAnswer":{"@type":"Answer","text":"No: prices vary by market. Our menu guide averages 9 US cities and excludes the priciest markets (San Diego, Los Angeles, New York), so your local cafe may price slightly differently."}},
+        {"@type":"Question","name":"Is Panera open on holidays?","acceptedAnswer":{"@type":"Answer","text":"Often yes, but with reduced hours on holidays like Thanksgiving and Christmas. Hours differ by location, so call ahead or check the live listing on the day."}}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.panerabread.com/"},{"@type":"ListItem","position":2,"name":"Panera Near Me","item":"https://www.panerabread.com/locations/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.panerabread.com/#organization","name":"Panera Bread","alternateName":"Panera","url":"https://www.panerabread.com","description":"Fast-casual bakery-cafe restaurant chain.","sameAs":["https://www.panerabread.com","https://en.wikipedia.org/wiki/Panera_Bread"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Panera Menu Guide","description":"Independent Panera Bread menu and ordering guide. Not affiliated with Panera Bread."}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FoodEstablishment","name":"Panera Bread","url":"https://www.panerabread.com","servesCuisine":["American","Bakery","Sandwiches","Salads","Soup"]}</script>
+    <style>
+      /* ============ TOKENS (shared with homepage) ============ */
+      :root {
+        --bg: #FAF6EF;
+        --bg-alt: #F2EBDD;
+        --tint: #F6F0E0;
+        --surface: #FFFFFF;
+        --surface-warm: #FDFBF6;
+        --text: #2A2620;
+        --text-soft: #4A4435;
+        --text-muted: #6E6455;
+        --brand-bg: #1E4D2B;
+        --brand-fg: #FFFFFF;
+        --forest-ink: #1E4D2B;
+        --deep-band: #123420;
+        --accent: #C2703D;
+        --accent-text: #93430F;
+        --accent-deep: #A5571F;
+        --gold: #D9A441;
+        --gold-ink: #3B2A0E;
+        --gold-bg: #FAEFD9;
+        --line: #E6DCCB;
+        --spine: #D8CBAF;
+        --warn: #B3402E;
+        --warn-ink: #8F2F1F;
+        --warn-bg: #FBEAE5;
+        --pill-bg: #E4EFE1;
+        --pill-ink: #1D4A27;
+        --shadow: 0 8px 28px rgba(30,40,25,.08);
+        --shadow-lg: 0 18px 44px rgba(30,40,25,.13);
+        --r-lg: 20px;
+        --r-md: 14px;
+        --r-sm: 9px;
+        --maxw: 1180px;
+        --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+        --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #14110B;
+          --bg-alt: #1A160E;
+          --surface: #211C12;
+          --surface-warm: #262014;
+          --text: #F4EEE1;
+          --text-soft: #D9CFB8;
+          --text-muted: #A89A80;
+          --brand-bg: #2E6B3C;
+          --brand-fg: #FFFFFF;
+          --forest-ink: #9ED1A5;
+          --deep-band: #0D2113;
+          --accent: #DE9159;
+          --accent-text: #EBA96F;
+          --gold-bg: #2E2410;
+          --line: #38301F;
+          --spine: #4A4028;
+          --warn: #E0806C;
+          --warn-ink: #EBA08D;
+          --warn-bg: rgba(224,128,108,.14);
+          --pill-bg: rgba(142,205,150,.16);
+          --pill-ink: #9ED1A5;
+          --shadow: 0 8px 28px rgba(0,0,0,.35);
+          --shadow-lg: 0 18px 44px rgba(0,0,0,.45);
+        }
+      }
+      /* ============ BASE ============ */
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { transition: none !important; }
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        font-size: 1.02rem;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3 { font-family: var(--serif); line-height: 1.15; margin: 0 0 .6rem; font-weight: 700; letter-spacing: -.01em; }
+      p { margin: 0 0 1rem; }
+      a { color: var(--accent-text); }
+      a:hover { color: var(--accent-deep); }
+      :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+      .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+      section { padding: 3.5rem 0; }
+      section.alt { background: var(--bg-alt); }
+      ::selection { background: var(--gold); color: #1d1608; }
+      /* ============ UTILITY BAR + NAV ============ */
+      .utilbar {
+        background: var(--deep-band); color: #F7F1E3;
+        font-size: .8rem; letter-spacing: .02em;
+        padding: .45rem 1rem; text-align: center;
+      }
+      .utilbar span + span::before { content: ' · '; color: var(--gold); }
+      .nav {
+        position: sticky; top: 0; z-index: 50;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav .wrap { display: flex; align-items: center; gap: 1.5rem; height: 64px; max-width: 1500px; }
+      .brand { font-family: var(--serif); font-weight: 700; font-size: 1.22rem; color: var(--text); text-decoration: none; white-space: nowrap; }
+      .brand b { color: var(--accent); font-weight: 700; }
+      .navlinks { display: flex; gap: 1.35rem; margin-left: auto; }
+      .navlinks a { color: var(--text-soft); text-decoration: none; font-weight: 500; font-size: .95rem; }
+      .navlinks a:hover { color: var(--accent-text); }
+      .navlinks a[aria-current="page"] { color: var(--accent-text); font-weight: 600; }
+      @media (max-width: 1900px) { .navlinks { display: none; } }
+      .btn {
+        display: inline-flex; align-items: center; gap: .5rem;
+        font-family: var(--sans); font-weight: 600; font-size: .95rem;
+        padding: .68rem 1.25rem; border-radius: 999px;
+        border: 1px solid transparent; cursor: pointer; text-decoration: none;
+        transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      }
+      .btn-primary { background: var(--brand-bg); color: var(--brand-fg); }
+      .btn-primary:hover { color: var(--brand-fg); box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+      .btn-acc { background: var(--accent); color: #23130A; }
+      .btn-acc:hover { color: #23130A; box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+      .btn-ghost { background: transparent; color: var(--text); border-color: var(--spine); }
+      .btn-ghost:hover { border-color: var(--accent); color: var(--accent-text); }
+      .btn-sm { padding: .5rem 1rem; font-size: .88rem; }
+      /* ============ HERO ============ */
+      .hero { padding: 3.25rem 0 2.75rem; background: var(--bg); }
+      .badge {
+        display: inline-flex; align-items: center; gap: .5rem;
+        background: var(--gold-bg); color: var(--gold-ink);
+        border: 1px solid var(--gold); border-radius: 999px;
+        font-size: .82rem; font-weight: 600; letter-spacing: .04em;
+        padding: .35rem .95rem; margin-bottom: 1.1rem;
+      }
+      @media (prefers-color-scheme: dark) { .badge { color: var(--gold); } }
+      .hero h1 { font-size: clamp(2.1rem, 1.5rem + 3.2vw, 2.85rem); max-width: 16em; }
+      .lede { font-size: 1.12rem; color: var(--text-soft); max-width: 44rem; }
+      .trust { font-size: .85rem; color: var(--text-muted); margin-top: 1.2rem; }
+      /* ============ SECTION HEADS ============ */
+      .kicker { font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 .55rem; }
+      .sec-head { max-width: 46rem; margin-bottom: 2rem; }
+      .sec-head h2 { font-size: clamp(1.7rem, 1.3rem + 2.2vw, 2.3rem); }
+      .sec-head p { color: var(--text-soft); margin: 0; }
+      /* ============ LOCATION FINDER ============ */
+      .finder-panel {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--r-lg); box-shadow: var(--shadow);
+        padding: 1.6rem; margin-bottom: 1.4rem;
+      }
+      .finder-row { display: flex; flex-wrap: wrap; gap: .7rem; align-items: stretch; }
+      .finder-row label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      .zip-input {
+        flex: 1 1 220px; min-width: 0;
+        font: inherit; font-size: 1rem; color: var(--text);
+        background: var(--bg); border: 1.5px solid var(--spine); border-radius: 999px;
+        padding: .68rem 1.2rem;
+      }
+      .zip-input::placeholder { color: var(--text-muted); }
+      .zip-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
+      .finder-status { font-size: .88rem; color: var(--text-muted); margin: .9rem 0 0; min-height: 1.4em; }
+      .finder-status.geo-error { color: var(--warn-ink); font-weight: 600; }
+      .map-frame {
+        margin: 0; border: 1px solid var(--line); border-radius: var(--r-lg);
+        overflow: hidden; box-shadow: var(--shadow);
+      }
+      .map-frame iframe { display: block; width: 100%; height: 420px; border: 0; }
+      @media (max-width: 640px) { .map-frame iframe { height: 320px; } }
+      .map-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.1rem; align-items: center; }
+      .map-hint { font-size: .86rem; color: var(--text-muted); margin: .8rem 0 0; font-style: italic; }
+      /* ============ CHECKLIST CARDS ============ */
+      .cards { display: grid; gap: 1.1rem; }
+      .cards-4 { grid-template-columns: repeat(4, 1fr); }
+      @media (max-width: 1020px) { .cards-4 { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 560px) { .cards-4 { grid-template-columns: 1fr; } }
+      .card {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--r-md); padding: 1.35rem 1.25rem 1.25rem;
+        box-shadow: var(--shadow); position: relative;
+        transition: transform .16s ease, box-shadow .16s ease;
+      }
+      .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+      @media (prefers-reduced-motion: reduce) { .card:hover { transform: none; } }
+      .card h3 { font-family: var(--sans); font-size: 1.02rem; font-weight: 700; line-height: 1.35; margin: 0 0 .5rem; letter-spacing: 0; }
+      .card p { font-size: .93rem; color: var(--text-soft); margin: 0; }
+      .check-icon {
+        width: 2.4rem; height: 2.4rem; border-radius: 50%;
+        background: var(--pill-bg); color: var(--pill-ink);
+        display: grid; place-items: center; margin-bottom: .85rem;
+      }
+      /* ============ TRIP STRIP ============ */
+      .strip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+      @media (max-width: 760px) { .strip-grid { grid-template-columns: 1fr; } }
+      .strip-link {
+        display: block; text-decoration: none; color: var(--text);
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--r-md); padding: 1.35rem 1.3rem;
+        box-shadow: var(--shadow);
+        transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+      }
+      .strip-link:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+      @media (prefers-reduced-motion: reduce) { .strip-link:hover { transform: none; } }
+      .strip-link h3 { font-size: 1.25rem; margin-bottom: .4rem; }
+      .strip-link p { font-size: .93rem; color: var(--text-soft); margin: 0 0 .7rem; }
+      .strip-link .go { font-weight: 600; color: var(--accent-text); font-size: .92rem; }
+      .strip-link:hover .go { color: var(--accent-deep); }
+      /* ============ FAQ ============ */
+      .faq-list { max-width: 46rem; margin: 0 auto; display: grid; gap: .7rem; padding: 0; list-style: none; }
+      .faq {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--r-md); box-shadow: var(--shadow); overflow: hidden;
+      }
+      .faq-q {
+        width: 100%; text-align: left; cursor: pointer;
+        background: none; border: none; font: inherit; color: var(--text);
+        display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+        padding: 1.05rem 1.25rem; font-weight: 600; font-size: 1.02rem;
+      }
+      .faq-q .pm { flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--bg-alt); color: var(--accent-text); display: grid; place-items: center; transition: transform .2s ease; }
+      .faq-q[aria-expanded="true"] .pm { transform: rotate(45deg); }
+      .faq-a { padding: 0 1.25rem; max-height: 0; overflow: hidden; transition: max-height .25s ease; }
+      .faq-a p { margin: 0 0 1.15rem; color: var(--text-soft); }
+      /* ============ CTA BANNER + FOOTER ============ */
+      .banner { background: var(--deep-band); color: #F5EFE0; padding: 3.25rem 0; }
+      .banner .wrap { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
+      @media (max-width: 720px) { .banner .wrap { grid-template-columns: 1fr; } }
+      .banner h2 { color: #fff; font-size: clamp(1.6rem, 1.2rem + 2vw, 2.1rem); margin-bottom: .6rem; }
+      .banner p { color: #D9D0B8; margin: 0; max-width: 38rem; }
+      .banner .btn-acc { font-size: 1rem; padding: .85rem 1.7rem; }
+      footer { background: var(--deep-band); color: #D9D0B8; padding: 2.75rem 0 2rem; font-size: .9rem; }
+      footer .wrap { display: grid; gap: 1.75rem; }
+      .foot-brand { font-family: var(--serif); font-weight: 700; font-size: 1.35rem; color: #fff; }
+      .foot-brand b { color: var(--gold); }
+      .foot-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+      .foot-links a { color: #D9D0B8; text-decoration: none; }
+      .foot-links a:hover { color: var(--gold); }
+      .disclaimer { color: #A99F88; font-size: .83rem; border-top: 1px solid rgba(217,164,65,.25); padding-top: 1.25rem; }
+      .disclaimer p { margin: 0 0 .5rem; }
+      .disclaimer p:last-child { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="utilbar" role="note">
+      <span>Find the nearest Panera</span><span>Hours vary by bakery-caf&eacute;</span><span>Check before you go</span>
+    </div>
+
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="../">Panera Menu <b>Guide</b></a>
+        <nav class="navlinks" aria-label="Sections">
+          <a href="../#finder">Finder</a>
+          <a href="../#categories">Categories</a>
+          <a href="./" aria-current="page">Locations</a>
+          <a href="../sandwiches/">Sandwiches</a>
+          <a href="../delivery/">Delivery</a>
+          <a href="../breakfast/">Breakfast</a>
+          <a href="../hours/">Hours</a>
+          <a href="../nutrition/">Nutrition</a>
+          <a href="../soups/">Soups</a>
+          <a href="../pick-two/">Pick Two</a>
+          <a href="../salads/">Salads</a>
+          <a href="../drinks/">Drinks</a>
+          <a href="../catering/">Catering</a>
+          <a href="../gluten-free/">Gluten Free</a>
+          <a href="../boxed-lunches/">Boxed Lunches</a>
+          <a href="../vegan/">Vegan</a>
+          <a href="../vegetarian/">Vegetarian</a>
+          <a href="../healthy/">Healthy</a>
+          <a href="../best/">Best Items</a>
+          <a href="../breakfast-catering/">Breakfast Catering</a>
+      <a href="../menu-pdf/">Menu PDF</a>
+      <a href="../coffee/">Coffee</a>
+          <a href="../#decide">Decide</a>
+          <a href="../#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-acc btn-sm" href="../#finder" style="margin-left:auto">Find Your Pick</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <span id="top"></span>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="wrap">
+          <p class="badge">Panera near me &middot; 2026 guide</p>
+          <h1 id="page-title">Find Panera Bread Near Me</h1>
+          <p class="lede">Search any ZIP or city, or use your location: we'll drop a map pin on every Panera near you. One honest rule for this page: check hours before you go, since they vary by bakery-cafe. Once you have picked your cafe, <a href="../">decide what to order before you go</a> so the visit stays quick.</p>
+          <p class="trust">Panera Bread is a fast-casual bakery-cafe chain. This page is an independent guide and is not affiliated with Panera.</p>
+        </div>
+      </section>
+
+      <section id="finder" class="alt" aria-labelledby="finder-title" style="padding-top:0">
+        <div class="wrap">
+          <div class="finder-panel">
+            <h2 id="finder-title" style="font-family:var(--sans);font-size:1.1rem;letter-spacing:0;margin-bottom:1rem">Search by ZIP, city, or your location</h2>
+            <form class="finder-row" id="loc-form">
+              <label for="loc-input">Enter ZIP code or city</label>
+              <input class="zip-input" id="loc-input" type="text" inputmode="text" placeholder="Enter ZIP or city" autocomplete="postal-code" />
+              <button class="btn btn-primary" type="submit">Search</button>
+              <button class="btn btn-ghost" type="button" id="geo-btn">Use my location</button>
+            </form>
+            <p class="finder-status" id="finder-status" role="status" aria-live="polite">Enter your ZIP to zoom in: the map is showing Panera locations nationwide.</p>
+          </div>
+          <figure class="map-frame">
+            <iframe id="map" title="Map of Panera Bread locations" src="https://www.google.com/maps?q=Panera+Bread&amp;output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" aria-describedby="map-hint"></iframe>
+          </figure>
+          <div class="map-actions">
+            <a class="btn btn-ghost" id="open-maps" href="https://www.google.com/maps?q=Panera+Bread" target="_blank" rel="noopener">Open in Google Maps</a>
+            <a class="btn btn-ghost" href="https://www.panerabread.com" target="_blank" rel="noopener">Panera&rsquo;s official site</a>
+          </div>
+          <p class="map-hint" id="map-hint">Each map listing shows address, hours, and whether the cafe has drive-thru, curbside pickup, or delivery.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="before-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">Before you go</p>
+            <h2 id="before-title">Four things worth checking</h2>
+            <p>Panera&rsquo;s bakery-cafes differ more than you&rsquo;d expect: a 30-second check now saves a wasted drive.</p>
+          </div>
+          <div class="cards cards-4">
+            <div class="card">
+              <span class="check-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7.5"/><path d="M10 6.5v3.5l2.5 1.5"/></svg></span>
+              <h3>Hours vary by location</h3>
+              <p>Most open around 6&ndash;7am and close around 8&ndash;9pm, but each cafe sets its own schedule. Always confirm on the Google Maps listing for your store.</p>
+            </div>
+            <div class="card">
+              <span class="check-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="14" height="12.5" rx="2"/><path d="M3 8.5h14M7.5 2.5v3M12.5 2.5v3"/></svg></span>
+              <h3>Holiday hours differ</h3>
+              <p>Hours are often reduced on Thanksgiving and Christmas, and they vary by cafe. Call ahead or check the live listing on the day.</p>
+            </div>
+            <div class="card">
+              <span class="check-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17.5S4 12.9 4 8.5A6 6 0 0 1 16 8.5c0 4.4-6 9-6 9z"/><circle cx="10" cy="8.5" r="2.2"/></svg></span>
+              <h3>Drive-thru, curbside, delivery</h3>
+              <p>Availability differs per cafe: not every location has all three. The map listing for your store shows exactly which ones it offers.</p>
+            </div>
+            <div class="card">
+              <span class="check-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.5 10 3l6.5 4.5v6L10 18l-6.5-4.5v-6z"/><path d="M10 12.5a1.8 1.8 0 1 0 0-.1"/></svg></span>
+              <h3>Prices vary by market</h3>
+              <p>Our menu prices are 9-city averages, and your cafe may price slightly differently. Treat them as a confident average, not your receipt.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt" aria-labelledby="trip-title" style="padding-top:3rem">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">Make the trip worth it</p>
+            <h2 id="trip-title">Decide before you drive</h2>
+            <p>Three shortcuts into the menu guide, so your order is settled before you park.</p>
+          </div>
+          <div class="strip-grid">
+            <a class="strip-link" href="../#finder">
+              <h3>Highest-protein picks</h3>
+              <p>Six protein-packed orders ranked from 263 items: up to 66g of protein in a single meal.</p>
+              <span class="go">Open the protein finder &rarr;</span>
+            </a>
+            <a class="strip-link" href="../#decide">
+              <h3>Best value under $10</h3>
+              <p>55+ items under $10: which ones are actually worth ordering, and which are traps.</p>
+              <span class="go">See the 30-second picks &rarr;</span>
+            </a>
+            <a class="strip-link" href="../#egg-sandwiches">
+              <h3>Breakfast menu</h3>
+              <p>Going in the morning? Fifteen egg sandwiches from $5.31, with the best value builds highlighted.</p>
+              <span class="go">Browse breakfast picks &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="journey-next" aria-label="Where to go next" style="max-width:46rem;margin:2.5rem auto;padding:0 1rem;"><div style="border:1px solid var(--border,#e5ddd0);border-radius:14px;padding:1.25rem 1.4rem;background:var(--bg-alt,#faf6ef);">
+            <p style="font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text,#8a5a2b);margin:0 0 .6rem;font-weight:700;">Where your next question leads</p>
+            <p>Found your cafe? <a href="../hours/">Check its hours before you head out</a>. Cannot get there in person? <a href="../delivery/">See how delivery works from that location</a>.</p>
+          </div></section>
+
+
+      <section id="faq" aria-labelledby="faq-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">FAQ</p>
+            <h2 id="faq-title">Panera locations: questions we hear</h2>
+            <p>Short answers to the questions people ask before heading out.</p>
+          </div>
+          <ul class="faq-list">
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>What are Panera&rsquo;s typical hours?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>Most bakery-cafes open around 6&ndash;7am and close around 8&ndash;9pm, but hours vary by location. Always confirm your store&rsquo;s hours on its Google Maps listing or Panera&rsquo;s official site before you go.</p></div>
+            </li>
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>How do I find the closest Panera to me?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>Use the finder at the top of this page: type your ZIP code or city and search, or tap &ldquo;Use my location&rdquo; for results around your current position. Each map listing shows the address, hours, and whether the cafe has drive-thru, curbside pickup, or delivery.</p></div>
+            </li>
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>Does every Panera have a drive-thru?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>No. Drive-thru, curbside pickup, and delivery availability differ from cafe to cafe. Check the listing for the location you plan to visit.</p></div>
+            </li>
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>Does Panera deliver?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>Yes. Panera offers delivery through its official website and app as well as third-party services, but availability and fees vary by location.</p></div>
+            </li>
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>Are Panera&rsquo;s prices the same everywhere?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>No: prices vary by market. Our menu guide averages 9 US cities and excludes the priciest markets (San Diego, Los Angeles, New York), so your local cafe may price slightly differently.</p></div>
+            </li>
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>Is Panera open on holidays?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>Often yes, but with reduced hours on holidays like Thanksgiving and Christmas. Hours differ by location, so call ahead or check the live listing on the day.</p></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="banner" aria-labelledby="cta-title">
+        <div class="wrap">
+          <div>
+            <h2 id="cta-title">Decided where: now decide what.</h2>
+            <p>You&rsquo;ve got the nearest cafe on the map. Next, pick your order with six ranked picks across protein, budget, and light-meal goals.</p>
+          </div>
+          <a class="btn btn-acc" href="../#finder">Find your pick</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="foot-brand">Panera Menu <b>Guide</b></div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="../#finder">Find Your Pick</a>
+          <a href="../#categories">Menu by Category</a>
+          <a href="./">Locations</a>
+          <a href="../sandwiches/">Sandwiches</a>
+          <a href="../delivery/">Delivery</a>
+          <a href="../breakfast/">Breakfast</a>
+          <a href="../hours/">Hours</a>
+          <a href="../nutrition/">Nutrition</a>
+          <a href="../soups/">Soups</a>
+          <a href="../pick-two/">Pick Two</a>
+          <a href="../salads/">Salads</a>
+          <a href="../drinks/">Drinks</a>
+          <a href="../catering/">Catering</a>
+          <a href="../gluten-free/">Gluten Free</a>
+          <a href="../boxed-lunches/">Boxed Lunches</a>
+          <a href="../vegan/">Vegan</a>
+          <a href="../vegetarian/">Vegetarian</a>
+          <a href="../healthy/">Healthy</a>
+          <a href="../best/">Best Items</a>
+          <a href="../breakfast-catering/">Breakfast Catering</a>
+      <a href="../menu-pdf/">Menu PDF</a>
+      <a href="../coffee/">Coffee</a>
+          <a href="../#decide">Decide in 30 Seconds</a>
+          <a href="../#faq">FAQ</a>
+          <a href="#top">Back to top</a>
+      <a href="../about/">About</a>
+      <a href="../contact/">Contact</a>
+      <a href="../disclaimer/">Disclaimer</a>
+      <a href="../privacy/">Privacy Policy</a>
+      <a href="../terms/">Terms</a>
+    </nav>
+        <div class="disclaimer">
+          <p>Independent guide. Not affiliated with or endorsed by Panera Bread. Prices are 9-city averages (San Diego, Los Angeles, and New York excluded): your caf&eacute; may vary.</p>
+          <p>Hours, drive-thru, and delivery availability vary by bakery-cafe: confirm on the listing for your store.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+(function () {
+  "use strict";
+
+  /* ---------- Map + link state ---------- */
+  var map = document.getElementById('map');
+  var openMaps = document.getElementById('open-maps');
+  var status = document.getElementById('finder-status');
+  var input = document.getElementById('loc-input');
+  var form = document.getElementById('loc-form');
+  var geoBtn = document.getElementById('geo-btn');
+
+  function setMap(src, openUrl, message) {
+    map.src = src;
+    openMaps.href = openUrl;
+    status.classList.remove('geo-error');
+    status.textContent = message;
+  }
+  function geoError() {
+    status.classList.add('geo-error');
+    status.textContent = 'Location blocked: type your ZIP instead.';
+  }
+
+  /* ---------- ZIP / city search ---------- */
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var q = input.value.trim();
+    if (!q) {
+      input.focus();
+      return;
+    }
+    var eq = encodeURIComponent(q);
+    setMap(
+      'https://www.google.com/maps?q=Panera+Bread+near+' + eq + '&output=embed',
+      'https://www.google.com/maps?q=Panera+Bread+near+' + eq,
+      'Showing Panera locations near \u201C' + q + '\u201D.'
+    );
+  });
+
+  /* ---------- Geolocation ---------- */
+  geoBtn.addEventListener('click', function () {
+    if (!navigator.geolocation) {
+      geoError();
+      return;
+    }
+    geoBtn.disabled = true;
+    status.textContent = 'Finding your location...';
+    navigator.geolocation.getCurrentPosition(
+      function (pos) {
+        geoBtn.disabled = false;
+        var lat = pos.coords.latitude.toFixed(5);
+        var lng = pos.coords.longitude.toFixed(5);
+        setMap(
+          'https://www.google.com/maps?q=Panera+Bread&ll=' + lat + ',' + lng + '&z=13&output=embed',
+          'https://www.google.com/maps?q=Panera+Bread+near+' + lat + ',' + lng + '&z=13',
+          'Showing Panera locations around your position.'
+        );
+      },
+      function () {
+        geoBtn.disabled = false;
+        geoError();
+      },
+      { timeout: 12000, maximumAge: 600000 }
+    );
+  });
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll('.faq').forEach(function (f) {
+    var btn = f.querySelector('.faq-q'), ans = f.querySelector('.faq-a');
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      ans.style.maxHeight = open ? '0px' : (ans.scrollHeight + 'px');
+    });
+  });
+})();
+    </script>
+  </body>
+</html>

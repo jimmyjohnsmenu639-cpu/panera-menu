@@ -1,0 +1,1564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Panera You Pick Two Menu: How It Works &amp; Best Combos (2026)</title>
+    <meta name="description" content="Build your Panera You Pick Two: pick any two halves and see estimated calories, protein and sodium before you order, plus 5 ready-made best combos." />
+    <meta name="theme-color" content="#FAF6EF" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#14110B" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Panera You Pick Two Menu: How It Works &amp; Best Combos (2026)" />
+    <meta property="og:description" content="Pick any two halves. See the real combined calories, protein, and sodium before you order. Estimates are badged; the math is honest." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    
+    <style>
+      /* ============ TOKENS (shared with the rest of the site) ============ */
+      :root {
+        --bg: #FAF6EF;
+        --bg-alt: #F2EBDD;
+        --tint: #F6F0E0;
+        --surface: #FFFFFF;
+        --surface-warm: #FDFBF6;
+        --text: #2A2620;
+        --text-soft: #4A4435;
+        --text-muted: #6E6455;
+        --brand-bg: #1E4D2B;
+        --brand-fg: #FFFFFF;
+        --forest-ink: #1E4D2B;
+        --deep-band: #123420;
+        --accent: #C2703D;
+        --accent-text: #93430F;
+        --accent-deep: #A5571F;
+        --gold: #D9A441;
+        --gold-ink: #3B2A0E;
+        --gold-bg: #FAEFD9;
+        --line: #E6DCCB;
+        --spine: #D8CBAF;
+        --warn: #B3402E;
+        --warn-ink: #8F2F1F;
+        --warn-bg: #FBEAE5;
+        --pill-bg: #E4EFE1;
+        --pill-ink: #1D4A27;
+        --shadow: 0 8px 28px rgba(30,40,25,.08);
+        --shadow-lg: 0 18px 44px rgba(30,40,25,.13);
+        --r-lg: 20px;
+        --r-md: 14px;
+        --r-sm: 9px;
+        --maxw: 1180px;
+        --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+        --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #14110B;
+          --bg-alt: #1A160E;
+          --surface: #211C12;
+          --surface-warm: #262014;
+          --text: #F4EEE1;
+          --text-soft: #D9CFB8;
+          --text-muted: #A89A80;
+          --brand-bg: #2E6B3C;
+          --brand-fg: #FFFFFF;
+          --forest-ink: #9ED1A5;
+          --deep-band: #0D2113;
+          --accent: #DE9159;
+          --accent-text: #EBA96F;
+          --gold-bg: #2E2410;
+          --line: #38301F;
+          --spine: #4A4028;
+          --warn: #E0806C;
+          --warn-ink: #EBA08D;
+          --warn-bg: rgba(224,128,108,.14);
+          --pill-bg: rgba(142,205,150,.16);
+          --pill-ink: #9ED1A5;
+          --shadow: 0 8px 28px rgba(0,0,0,.35);
+          --shadow-lg: 0 18px 44px rgba(0,0,0,.45);
+        }
+      }
+      /* ============ BASE ============ */
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { transition: none !important; }
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        font-size: 1.02rem;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3 { font-family: var(--serif); line-height: 1.15; margin: 0 0 .6rem; font-weight: 700; letter-spacing: -.01em; }
+      p { margin: 0 0 1rem; }
+      a { color: var(--accent-text); }
+      a:hover { color: var(--accent-deep); }
+      :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+      .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+      section { padding: 3.5rem 0; }
+      section.alt { background: var(--bg-alt); }
+      ::selection { background: var(--gold); color: #1d1608; }
+      /* ============ UTILITY BAR + NAV ============ */
+      .utilbar {
+        background: var(--deep-band); color: #F7F1E3;
+        font-size: .8rem; letter-spacing: .02em;
+        padding: .45rem 1rem; text-align: center;
+      }
+      .utilbar span + span::before { content: ' · '; color: var(--gold); }
+      .nav {
+        position: sticky; top: 0; z-index: 50;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav .wrap { display: flex; align-items: center; gap: 1.5rem; height: 64px; max-width: 1500px; }
+      .brand { font-family: var(--serif); font-weight: 700; font-size: 1.22rem; color: var(--text); text-decoration: none; white-space: nowrap; }
+      .brand b { color: var(--accent); font-weight: 700; }
+      .navlinks { display: flex; gap: 1.35rem; margin-left: auto; }
+      .navlinks a { color: var(--text-soft); text-decoration: none; font-weight: 500; font-size: .95rem; }
+      .navlinks a:hover { color: var(--accent-text); }
+      .navlinks a[aria-current="page"] { color: var(--accent-text); font-weight: 600; }
+      @media (max-width: 1900px) { .navlinks { display: none; } }
+      .btn {
+        display: inline-flex; align-items: center; gap: .5rem;
+        font-family: var(--sans); font-weight: 600; font-size: .95rem;
+        padding: .68rem 1.25rem; border-radius: 999px;
+        border: 1px solid transparent; cursor: pointer; text-decoration: none;
+        transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      }
+      .btn-primary { background: var(--brand-bg); color: var(--brand-fg); }
+      .btn-primary:hover { color: var(--brand-fg); box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+      .btn-acc { background: var(--accent); color: #23130A; }
+      .btn-acc:hover { color: #23130A; box-shadow: var(--shadow-lg); transform: translateY(-1px); }
+      .btn-ghost { background: transparent; color: var(--text); border-color: var(--spine); }
+      .btn-ghost:hover { border-color: var(--accent); color: var(--accent-text); }
+      .btn-sm { padding: .5rem 1rem; font-size: .88rem; }
+      /* ============ HERO ============ */
+      .hero { padding: 3.25rem 0 2.75rem; background: var(--bg); }
+      .badge {
+        display: inline-flex; align-items: center; gap: .5rem;
+        background: var(--gold-bg); color: var(--gold-ink);
+        border: 1px solid var(--gold); border-radius: 999px;
+        font-size: .82rem; font-weight: 600; letter-spacing: .04em;
+        padding: .35rem .95rem; margin-bottom: 1.1rem;
+      }
+      @media (prefers-color-scheme: dark) { .badge { color: var(--gold); } }
+      .hero h1 { font-size: clamp(2.1rem, 1.5rem + 3.2vw, 2.85rem); max-width: 15em; }
+      .lede { font-size: 1.12rem; color: var(--text-soft); max-width: 46rem; }
+      .lede strong { color: var(--text); }
+      .trust { font-size: .85rem; color: var(--text-muted); margin-top: 1.2rem; max-width: 46rem; }
+      .hero-quick { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+      .quick-chip {
+        display: inline-flex; align-items: baseline; gap: .55rem;
+        border: 1px solid var(--spine); background: var(--surface);
+        border-radius: var(--r-md); padding: .65rem .95rem; text-decoration: none;
+        transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+      }
+      .quick-chip:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
+      @media (prefers-reduced-motion: reduce) { .quick-chip:hover { transform: none; } }
+      .quick-chip .qm { font-family: var(--serif); font-weight: 700; font-size: 1.25rem; color: var(--forest-ink); }
+      .quick-chip .qx { font-size: .82rem; color: var(--text-soft); line-height: 1.35; }
+      .quick-chip .qx strong { color: var(--text); display: block; font-size: .85rem; }
+      /* ============ SECTION HEADS ============ */
+      .kicker { font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 .55rem; }
+      .sec-head { max-width: 46rem; margin-bottom: 2rem; }
+      .sec-head h2 { font-size: clamp(1.7rem, 1.3rem + 2.2vw, 2.3rem); }
+      .sec-head p { color: var(--text-soft); margin: 0; }
+      /* ============ ESTIMATED BADGE ============ */
+      .est {
+        display: inline-flex; align-items: center; gap: .3rem;
+        background: var(--gold-bg); color: var(--gold-ink);
+        border: 1px solid var(--gold); border-radius: 999px;
+        font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+        padding: .18rem .55rem; vertical-align: middle; white-space: nowrap;
+      }
+      @media (prefers-color-scheme: dark) { .est { color: var(--gold); } }
+      .est-dot { width: .45rem; height: .45rem; border-radius: 50%; background: var(--accent); flex: none; }
+      /* ============ BUILDER ============ */
+      .builder {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--r-lg); box-shadow: var(--shadow-lg); overflow: hidden;
+      }
+      .builder-head {
+        background: var(--deep-band); color: #F3EDDF; padding: 1.5rem 1.6rem 1.25rem;
+      }
+      .builder-head h3 { color: #fff; font-size: 1.35rem; margin: 0 0 .3rem; }
+      .builder-head p { color: #D9D0B8; margin: 0; font-size: .94rem; max-width: 44rem; }
+      .builder-body { padding: 1.5rem 1.6rem 1.6rem; }
+      .pickers { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: start; }
+      @media (max-width: 820px) { .pickers { grid-template-columns: 1fr; } }
+      .plus {
+        align-self: center; justify-self: center;
+        width: 2.6rem; height: 2.6rem; border-radius: 50%;
+        background: var(--deep-band); color: var(--gold);
+        font-family: var(--serif); font-weight: 700; font-size: 1.3rem;
+        display: grid; place-items: center; border: 2px solid var(--gold);
+      }
+      .picker {
+        background: var(--surface-warm); border: 1px solid var(--spine);
+        border-radius: var(--r-md); padding: 1rem 1rem 1.05rem;
+      }
+      .picker h4 { font-family: var(--sans); font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 .7rem; }
+      .ctabs { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: .75rem; }
+      .ctab {
+        border: 1.5px solid var(--spine); background: var(--surface);
+        color: var(--text-soft); border-radius: 999px;
+        font-family: var(--sans); font-weight: 600; font-size: .84rem;
+        padding: .45rem .9rem; cursor: pointer;
+        transition: background .15s ease, color .15s ease, border-color .15s ease;
+      }
+      .ctab:hover { border-color: var(--accent); color: var(--accent-text); }
+      .ctab[aria-selected="true"] { background: var(--brand-bg); border-color: var(--brand-bg); color: var(--brand-fg); }
+      .picker select {
+        width: 100%; font-family: var(--sans); font-size: .98rem; color: var(--text);
+        background: var(--surface); border: 1.5px solid var(--spine);
+        border-radius: var(--r-sm); padding: .65rem .75rem; cursor: pointer;
+      }
+      .picker select:focus { border-color: var(--accent); outline: 3px solid var(--accent); outline-offset: 1px; }
+      .picker-read { margin-top: .8rem; font-size: .86rem; color: var(--text-muted); min-height: 2.6em; }
+      .picker-read strong { color: var(--text-soft); }
+      .totals {
+        margin-top: 1.4rem; background: var(--deep-band); color: #F3EDDF;
+        border-radius: var(--r-md); padding: 1.3rem 1.4rem;
+        display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 1.2rem; align-items: center;
+      }
+      @media (max-width: 760px) { .totals { grid-template-columns: 1fr 1fr; } }
+      .total .v { font-family: var(--serif); font-weight: 700; font-size: 2rem; line-height: 1; color: var(--gold); display: block; }
+      .total .k { font-size: .8rem; color: #D9D0B8; display: block; margin-top: .35rem; }
+      .total .k .est { margin-left: .35rem; }
+      .verdicts { list-style: none; margin: 1.15rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .55rem; }
+      .verdict {
+        display: inline-flex; align-items: center; gap: .45rem;
+        border-radius: 999px; padding: .45rem .95rem; font-size: .88rem; font-weight: 600;
+      }
+      .verdict.good { background: var(--pill-bg); color: var(--pill-ink); }
+      .verdict.warn { background: var(--warn-bg); color: var(--warn-ink); }
+      .verdict.neutral { background: var(--bg-alt); color: var(--text-soft); }
+      .builder-note { font-size: .85rem; color: var(--text-muted); margin: 1rem 0 0; max-width: 52rem; }
+      .builder-note b { color: var(--text-soft); }
+      /* ============ STEPS ============ */
+      .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+      @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
+      .step {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--r-md); padding: 1.3rem 1.3rem 1.15rem; box-shadow: var(--shadow);
+      }
+      .step .n {
+        font-family: var(--serif); font-weight: 700; font-size: 1.9rem; line-height: 1;
+        color: var(--accent-text); display: block; margin-bottom: .5rem;
+      }
+      .step h3 { font-family: var(--sans); font-size: 1.02rem; margin: 0 0 .4rem; }
+      .step p { font-size: .94rem; color: var(--text-soft); margin: 0; }
+      /* ============ COMBO CARDS ============ */
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+      @media (max-width: 1020px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+      .card {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--r-md); padding: 1.25rem 1.25rem 1.15rem;
+        box-shadow: var(--shadow); position: relative;
+        transition: transform .16s ease, box-shadow .16s ease;
+        display: flex; flex-direction: column; gap: .55rem;
+      }
+      .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+      @media (prefers-reduced-motion: reduce) { .card:hover { transform: none; } }
+      .card .tag { font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-text); }
+      .card h3 { font-family: var(--sans); font-size: 1.05rem; font-weight: 700; line-height: 1.35; margin: 0; letter-spacing: 0; }
+      .card .combo { font-size: .95rem; color: var(--text-soft); margin: 0; }
+      .big-num { display: flex; align-items: baseline; gap: .8rem; flex-wrap: wrap; }
+      .big-num .cal { font-family: var(--serif); font-weight: 700; font-size: 1.9rem; color: var(--forest-ink); line-height: 1; }
+      .chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+      .chip {
+        font-size: .78rem; font-weight: 500; color: var(--text-soft);
+        background: var(--bg-alt); border-radius: 999px; padding: .28rem .7rem; white-space: nowrap;
+      }
+      .chip.price { background: var(--gold-bg); color: var(--gold-ink); font-weight: 700; border: 1px solid var(--gold); }
+      @media (prefers-color-scheme: dark) { .chip.price { color: var(--gold); } }
+      .card .when { font-size: .9rem; color: var(--text-muted); margin: 0; }
+      .card .when b { color: var(--text-soft); font-weight: 600; }
+      .card .load {
+        margin-top: auto; align-self: flex-start;
+        background: none; border: none; padding: .2rem 0; cursor: pointer;
+        font-family: var(--sans); font-weight: 600; font-size: .88rem; color: var(--accent-text);
+        text-decoration: underline; text-underline-offset: 3px;
+      }
+      .card .load:hover { color: var(--accent-deep); }
+      /* ============ COMPARE ============ */
+      .compare { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+      @media (max-width: 860px) { .compare { grid-template-columns: 1fr; } }
+      .cmp {
+        border-radius: var(--r-md); padding: 1.5rem 1.45rem 1.3rem; box-shadow: var(--shadow);
+        display: flex; flex-direction: column; gap: .6rem;
+      }
+      .cmp.hero-cmp { background: var(--deep-band); color: #F3EDDF; }
+      .cmp.plain { background: var(--surface); border: 1px solid var(--line); }
+      .cmp .c-tag { font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      .cmp.hero-cmp .c-tag { color: var(--gold); }
+      .cmp.plain .c-tag { color: var(--accent-text); }
+      .cmp h3 { font-size: 1.3rem; margin: 0; }
+      .cmp.hero-cmp h3 { color: #fff; }
+      .cmp .c-price { font-family: var(--serif); font-weight: 700; font-size: 1.5rem; line-height: 1.1; }
+      .cmp.hero-cmp .c-price { color: var(--gold); }
+      .cmp.plain .c-price { color: var(--forest-ink); }
+      .cmp p { font-size: .94rem; margin: 0; }
+      .cmp.hero-cmp p { color: #D9D0B8; }
+      .cmp.plain p { color: var(--text-soft); }
+      .cmp .c-verdict { margin-top: auto; padding-top: .7rem; border-top: 1px solid var(--line); font-weight: 600; font-size: .94rem; }
+      .cmp.hero-cmp .c-verdict { border-top-color: rgba(217,164,65,.35); color: #fff; }
+      .cmp-note { font-size: .86rem; color: var(--text-muted); margin: 1.1rem 0 0; max-width: 52rem; }
+      /* ============ FAQ ============ */
+      .faq-list { max-width: 46rem; margin: 0 auto; display: grid; gap: .7rem; padding: 0; list-style: none; }
+      .faq {
+        background: var(--surface); border: 1px solid var(--line);
+        border-radius: var(--r-md); box-shadow: var(--shadow); overflow: hidden;
+      }
+      .faq-q {
+        width: 100%; text-align: left; cursor: pointer;
+        background: none; border: none; font: inherit; color: var(--text);
+        display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+        padding: 1.05rem 1.25rem; font-weight: 600; font-size: 1.02rem;
+      }
+      .faq-q .pm { flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--bg-alt); color: var(--accent-text); display: grid; place-items: center; transition: transform .2s ease; }
+      .faq-q[aria-expanded="true"] .pm { transform: rotate(45deg); }
+      .faq-a { padding: 0 1.25rem; max-height: 0; overflow: hidden; transition: max-height .25s ease; }
+      .faq-a p { margin: 0 0 1.15rem; color: var(--text-soft); }
+      /* ============ CROSS LINKS ============ */
+      .xlinks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+      @media (max-width: 860px) { .xlinks { grid-template-columns: 1fr; } }
+      .xlink {
+        display: block; text-decoration: none;
+        background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md);
+        padding: 1.15rem 1.25rem; box-shadow: var(--shadow);
+        transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+      }
+      .xlink:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+      .xlink strong { display: block; font-family: var(--serif); font-size: 1.15rem; color: var(--text); margin-bottom: .25rem; }
+      .xlink span { font-size: .9rem; color: var(--text-muted); }
+      /* ============ FOOTER ============ */
+      footer { background: var(--deep-band); color: #D9D0B8; padding: 2.75rem 0 2rem; font-size: .9rem; }
+      footer .wrap { display: grid; gap: 1.75rem; }
+      .foot-brand { font-family: var(--serif); font-weight: 700; font-size: 1.35rem; color: #fff; }
+      .foot-brand b { color: var(--gold); }
+      .foot-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+      .foot-links a { color: #D9D0B8; text-decoration: none; }
+      .foot-links a:hover { color: var(--gold); }
+      .disclaimer { color: #A99F88; font-size: .83rem; border-top: 1px solid rgba(217,164,65,.25); padding-top: 1.25rem; }
+      .disclaimer p { margin: 0 0 .5rem; }
+      .disclaimer p:last-child { margin: 0; }
+    </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.panerabread.com/#organization",
+      "name": "Panera Bread",
+      "url": "https://www.panerabread.com/",
+      "sameAs": [
+        "https://www.panerabread.com/",
+        "https://en.wikipedia.org/wiki/Panera_Bread"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "#website",
+      "name": "Panera Menu Guide",
+      "publisher": {
+        "@id": "https://www.panerabread.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "/pick-two/#webpage",
+      "url": "/pick-two/",
+      "name": "Panera You Pick Two: Build Your Perfect Combo (2026)",
+      "description": "Pick any two halves and see the real combined calories, protein, and sodium before you order. Estimates are badged; the math is honest.",
+      "isPartOf": {
+        "@id": "#website"
+      },
+      "about": {
+        "@id": "https://www.panerabread.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "/pick-two/#menu"
+      },
+      "breadcrumb": {
+        "@id": "/pick-two/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "You Pick Two",
+          "item": "/pick-two/"
+        }
+      ],
+      "@id": "/pick-two/#breadcrumb"
+    },
+    {
+      "@type": "Menu",
+      "@id": "/pick-two/#menu",
+      "name": "Panera You Pick Two Eligible Items",
+      "description": "The 33 items eligible for Panera Bread's You Pick Two combo: 20 half sandwiches, 10 cups of soup, and 3 half salads. Prices shown are full-item 9-city averages (Sept 2026) for reference; the You Pick Two combo price is set at the cafe and varies. Half portions are estimated at half of the full portion and badged; soup is shown at face value as the cup size.",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Half Sandwiches",
+          "description": "Any of Panera's 20 sandwiches as a half portion. Halves are estimated at half of the full portion.",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Chicken Bacon Rancher",
+              "description": "The Chicken Bacon Rancher is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 1010 calories, 52g protein, and 2440mg sodium for the full portion at $11.73. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "11.73",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "1010 calories",
+                "proteinContent": "52 g",
+                "sodiumContent": "2440 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Chicken Pesto Ciabatta Dipper",
+              "description": "The Chicken Pesto Ciabatta Dipper is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 1010 calories, 59g protein, and 2570mg sodium for the full portion at $9.96. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "9.96",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "1010 calories",
+                "proteinContent": "59 g",
+                "sodiumContent": "2570 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Chicken Roma Asiago Bagel Stack",
+              "description": "The Chicken Roma Asiago Bagel Stack is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 610 calories, 31g protein, and 1120mg sodium for the full portion at $8.10. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.10",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "610 calories",
+                "proteinContent": "31 g",
+                "sodiumContent": "1120 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Chipotle Chicken Avo Melt",
+              "description": "The Chipotle Chicken Avo Melt is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 1000 calories, 43g protein, and 2550mg sodium for the full portion at $11.87. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "11.87",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "1000 calories",
+                "proteinContent": "43 g",
+                "sodiumContent": "2550 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Ciabatta Cheesesteak",
+              "description": "The Ciabatta Cheesesteak is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 1160 calories, 52g protein, and 2090mg sodium for the full portion at $12.65. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "12.65",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "1160 calories",
+                "proteinContent": "52 g",
+                "sodiumContent": "2090 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "French Ciabatta Dipper",
+              "description": "The French Ciabatta Dipper is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 1240 calories, 66g protein, and 2960mg sodium for the full portion at $11.88. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "11.88",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "1240 calories",
+                "proteinContent": "66 g",
+                "sodiumContent": "2960 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Grilled Cheese",
+              "description": "The Grilled Cheese is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 810 calories, 32g protein, and 2540mg sodium for the full portion at $8.08. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.08",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "810 calories",
+                "proteinContent": "32 g",
+                "sodiumContent": "2540 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Smokehouse BBQ Chicken",
+              "description": "The Smokehouse BBQ Chicken is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 820 calories, 45g protein, and 2390mg sodium for the full portion at $9.87. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "9.87",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "820 calories",
+                "proteinContent": "45 g",
+                "sodiumContent": "2390 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Spicy Fiesta Chicken",
+              "description": "The Spicy Fiesta Chicken is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 940 calories, 51g protein, and 1970mg sodium for the full portion at $11.66. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "11.66",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "940 calories",
+                "proteinContent": "51 g",
+                "sodiumContent": "1970 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Spicy Steak Asiago Bagel Stack",
+              "description": "The Spicy Steak Asiago Bagel Stack is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 630 calories, 39g protein, and 1480mg sodium for the full portion at $8.10. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.10",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "630 calories",
+                "proteinContent": "39 g",
+                "sodiumContent": "1480 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Toasted Caprese Focaccia",
+              "description": "The Toasted Caprese Focaccia is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 740 calories, 30g protein, and 1480mg sodium for the full portion at $9.70. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "9.70",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "740 calories",
+                "proteinContent": "30 g",
+                "sodiumContent": "1480 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Toasted Frontega Chicken",
+              "description": "The Toasted Frontega Chicken is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 860 calories, 40g protein, and 2430mg sodium for the full portion at $11.73. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "11.73",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "860 calories",
+                "proteinContent": "40 g",
+                "sodiumContent": "2430 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Toasted Italiano",
+              "description": "The Toasted Italiano is a hot sandwich on the Panera Bread menu and eligible for You Pick Two: 1330 calories, 58g protein, and 4110mg sodium for the full portion at $12.55. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "12.55",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "1330 calories",
+                "proteinContent": "58 g",
+                "sodiumContent": "4110 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Bacon Turkey Bravo",
+              "description": "The Bacon Turkey Bravo is a cold sandwich on the Panera Bread menu and eligible for You Pick Two: 860 calories, 47g protein, and 2430mg sodium for the full portion at $11.81. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "11.81",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "860 calories",
+                "proteinContent": "47 g",
+                "sodiumContent": "2430 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Cranberry Walnut Chicken Salad Sandwich",
+              "description": "The Cranberry Walnut Chicken Salad Sandwich is a cold sandwich on the Panera Bread menu and eligible for You Pick Two: 690 calories, 32g protein, and 970mg sodium for the full portion at $9.23. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "9.23",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "690 calories",
+                "proteinContent": "32 g",
+                "sodiumContent": "970 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Grilled Chicken & Avo BLT",
+              "description": "The Grilled Chicken & Avo BLT is a cold sandwich on the Panera Bread menu and eligible for You Pick Two: 940 calories, 48g protein, and 1750mg sodium for the full portion at $12.56. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "12.56",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "940 calories",
+                "proteinContent": "48 g",
+                "sodiumContent": "1750 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Mediterranean Veggie",
+              "description": "The Mediterranean Veggie is a cold sandwich on the Panera Bread menu and eligible for You Pick Two: 520 calories, 18g protein, and 1260mg sodium for the full portion at $8.12. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.12",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "520 calories",
+                "proteinContent": "18 g",
+                "sodiumContent": "1260 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Tomato Basil BLT",
+              "description": "The Tomato Basil BLT is a cold sandwich on the Panera Bread menu and eligible for You Pick Two: 780 calories, 23g protein, and 1560mg sodium for the full portion at $9.37. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "9.37",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "780 calories",
+                "proteinContent": "23 g",
+                "sodiumContent": "1560 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Tuna Salad Sandwich",
+              "description": "The Tuna Salad Sandwich is a cold sandwich on the Panera Bread menu and eligible for You Pick Two: 590 calories, 24g protein, and 1200mg sodium for the full portion at $9.93. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "9.93",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "590 calories",
+                "proteinContent": "24 g",
+                "sodiumContent": "1200 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Turkey & Cheddar Sandwich",
+              "description": "The Turkey & Cheddar Sandwich is a cold sandwich on the Panera Bread menu and eligible for You Pick Two: 840 calories, 40g protein, and 2110mg sodium for the full portion at $9.93. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "9.93",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "840 calories",
+                "proteinContent": "40 g",
+                "sodiumContent": "2110 mg"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Cup of Soup",
+          "description": "Soup is served at the cup size in You Pick Two, shown at face value.",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Homestyle Chicken Noodle Soup",
+              "description": "The Homestyle Chicken Noodle Soup is a soup served at Panera Bread and eligible for You Pick Two: 180 calories, 14g protein, and 1570mg sodium for the full portion at $8.13. Shown at face value as the cup size.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.13",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "180 calories",
+                "proteinContent": "14 g",
+                "sodiumContent": "1570 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Bistro French Onion Soup",
+              "description": "The Bistro French Onion Soup is a soup served at Panera Bread and eligible for You Pick Two: 300 calories, 10g protein, and 1820mg sodium for the full portion at $8.13. Shown at face value as the cup size.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.13",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "300 calories",
+                "proteinContent": "10 g",
+                "sodiumContent": "1820 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Cream of Chicken & Wild Rice Soup",
+              "description": "The Cream of Chicken & Wild Rice Soup is a soup served at Panera Bread and eligible for You Pick Two: 300 calories, 9g protein, and 1400mg sodium for the full portion at $8.13. Shown at face value as the cup size.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.13",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "300 calories",
+                "proteinContent": "9 g",
+                "sodiumContent": "1400 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Broccoli Cheddar Soup",
+              "description": "The Broccoli Cheddar Soup is a soup served at Panera Bread and eligible for You Pick Two: 420 calories, 12g protein, and 1520mg sodium for the full portion at $8.13. Shown at face value as the cup size.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.13",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "420 calories",
+                "proteinContent": "12 g",
+                "sodiumContent": "1520 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Creamy Tomato Soup",
+              "description": "The Creamy Tomato Soup is a soup served at Panera Bread and eligible for You Pick Two: 340 calories, 4g protein, and 1110mg sodium for the full portion at $8.16. Shown at face value as the cup size.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.16",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "340 calories",
+                "proteinContent": "4 g",
+                "sodiumContent": "1110 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Autumn Squash Soup",
+              "description": "The Autumn Squash Soup is a soup served at Panera Bread and eligible for You Pick Two: 330 calories, 8g protein, and 1210mg sodium for the full portion at $8.22. Shown at face value as the cup size.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.22",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "330 calories",
+                "proteinContent": "8 g",
+                "sodiumContent": "1210 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Rustic Baked Potato Soup",
+              "description": "The Rustic Baked Potato Soup is a soup served at Panera Bread and eligible for You Pick Two: 430 calories, 14g protein, and 1660mg sodium for the full portion at $8.29. Shown at face value as the cup size.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.29",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "430 calories",
+                "proteinContent": "14 g",
+                "sodiumContent": "1660 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Three Cheese Lasagna Soup",
+              "description": "The Three Cheese Lasagna Soup is a soup served at Panera Bread and eligible for You Pick Two: 360 calories, 19g protein, and 1460mg sodium for the full portion at $8.29. Shown at face value as the cup size.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.29",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "360 calories",
+                "proteinContent": "19 g",
+                "sodiumContent": "1460 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Mac & Cheese",
+              "description": "The Mac & Cheese is a soup served at Panera Bread and eligible for You Pick Two: 980 calories, 32g protein, and 2300mg sodium for the full portion at $10.26. Shown at face value as the cup size.",
+              "offers": {
+                "@type": "Offer",
+                "price": "10.26",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "980 calories",
+                "proteinContent": "32 g",
+                "sodiumContent": "2300 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Bacon Mac & Cheese",
+              "description": "The Bacon Mac & Cheese is a soup served at Panera Bread and eligible for You Pick Two: 1050 calories, 36g protein, and 2620mg sodium for the full portion at $11.57. Shown at face value as the cup size.",
+              "offers": {
+                "@type": "Offer",
+                "price": "11.57",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "1050 calories",
+                "proteinContent": "36 g",
+                "sodiumContent": "2620 mg"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Half Salads",
+          "description": "Salads as a half portion. Halves are estimated at half of the full portion.",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Farmhouse Crunch Salad",
+              "description": "The Farmhouse Crunch Salad is a salad on the Panera Bread menu and eligible for You Pick Two: 790 calories, 18g protein, and 1190mg sodium for the full portion at $9.76. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "9.76",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "790 calories",
+                "proteinContent": "18 g",
+                "sodiumContent": "1190 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Greek Salad",
+              "description": "The Greek Salad is a salad on the Panera Bread menu and eligible for You Pick Two: 630 calories, 8g protein, and 1400mg sodium for the full portion at $8.82. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.82",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "630 calories",
+                "proteinContent": "8 g",
+                "sodiumContent": "1400 mg"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Harvest Medley Salad",
+              "description": "The Harvest Medley Salad is a salad on the Panera Bread menu and eligible for You Pick Two: 750 calories, 12g protein, and 870mg sodium for the full portion at $9.73. Half portions are estimated at half of the full portion.",
+              "offers": {
+                "@type": "Offer",
+                "price": "9.73",
+                "priceCurrency": "USD"
+              },
+              "nutrition": {
+                "@type": "NutritionInformation",
+                "calories": "750 calories",
+                "proteinContent": "12 g",
+                "sodiumContent": "870 mg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "/pick-two/#combos",
+      "name": "Ready-Made You Pick Two Combos",
+      "description": "Five ready-made You Pick Two combinations with estimated combined totals. All figures estimated and badged.",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "MenuItem",
+            "name": "Lightest: Half Mediterranean Veggie + Cup Homestyle Chicken Noodle Soup",
+            "description": "Lightest is a You Pick Two combination at Panera Bread: Half Mediterranean Veggie plus a cup of Homestyle Chicken Noodle Soup. Estimated total: about 440 calories and 23g protein. Halves estimated at half of full portions; soup at face value."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "MenuItem",
+            "name": "Protein Max: Half French Ciabatta Dipper + Cup Three Cheese Lasagna Soup",
+            "description": "Protein Max is a You Pick Two combination at Panera Bread: Half French Ciabatta Dipper plus a cup of Three Cheese Lasagna Soup. Estimated total: about 980 calories and 52g protein. Halves estimated at half of full portions; soup at face value."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "MenuItem",
+            "name": "Comfort: Half Grilled Cheese + Cup Creamy Tomato Soup",
+            "description": "Comfort is a You Pick Two combination at Panera Bread: Half Grilled Cheese plus a cup of Creamy Tomato Soup. Estimated total: about 745 calories and 20g protein. Halves estimated at half of full portions; soup at face value."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "MenuItem",
+            "name": "Balanced: Half Turkey & Cheddar Sandwich + Half Farmhouse Crunch Salad",
+            "description": "Balanced is a You Pick Two combination at Panera Bread: Half Turkey & Cheddar Sandwich plus Half Farmhouse Crunch Salad. Estimated total: about 815 calories and 29g protein. Halves estimated at half of full portions; soup at face value."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "MenuItem",
+            "name": "Soup Lover: Cup Broccoli Cheddar Soup + Cup Bistro French Onion Soup",
+            "description": "Soup Lover is a You Pick Two combination at Panera Bread: a cup of Broccoli Cheddar Soup plus a cup of Bistro French Onion Soup. Estimated total: about 720 calories and 22g protein. Halves estimated at half of full portions; soup at face value."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "/pick-two/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does You Pick Two work at Panera?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pick any two halves from three categories: half sandwich, cup of soup, or half salad. They are priced together as one combo at the cafe, and the combo comes with your side choice. It is a lunch menu item: it is not available during breakfast hours, and the lunch menu starts around 10:30am."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many calories are in a Panera Pick Two?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends entirely on the combo. Light pairings land in the 400s: for example a half Mediterranean Veggie with a cup of Chicken Noodle Soup is about 440 estimated calories. Heavy pairings cross 1,000 estimated calories: for example a half French Ciabatta Dipper with a cup of Three Cheese Lasagna Soup is about 980 estimated calories. Panera does not publish nutrition for halves, so every half figure here is an estimate. Use the builder on this page to check your own combo before you order."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I pick any two items for You Pick Two?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can pick any two halves from the three categories: half sandwiches, cups of soup, and half salads. You may pick from the same category twice, for example two cups of soup, if your cafe offers it. Specific items vary by cafe and by day, and seasonal items rotate, so availability is not guaranteed at every location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Pick Two cheaper than ordering two full items?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, in the sense that two halves are priced together as one combo rather than as two separate full items. The exact combo price is set at the cafe and varies by location, so this page never invents a half price: it shows the full-item 9-city average price as a reference and tells you to check your cafe for the combo price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between You Pick Two and Value Duets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You Pick Two is the full-choice option: any two halves from the three categories, priced as one combo at the cafe. Value Duets are pre-set pairings sold at fixed prices, typically reported around $6.99 to $8.99 per pairing. Mix and Match is a separate deal built from selected individual items at about $4.99 each. Duets and Mix and Match trade choice for a fixed price; Pick Two trades the fixed price for freedom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get You Pick Two at breakfast?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You Pick Two is part of the lunch menu, which starts around 10:30am at most cafes. It is not available during breakfast hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the halves in You Pick Two really half?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Panera does not publish nutrition for halves. Half numbers here are estimates, and real halves vary a little in the kitchen."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+  <body>
+    <div class="utilbar" role="note">
+      <span>Prices checked Sept 30, 2026</span><span>9-city average</span><span>Official nutrition guide 9/2/2026</span><span>Halves are estimates</span>
+    </div>
+
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="../">Panera Menu <b>Guide</b></a>
+        <nav class="navlinks" aria-label="Sections">
+          <a href="../#finder">Finder</a>
+          <a href="../#categories">Categories</a>
+          <a href="../locations/">Locations</a>
+          <a href="../sandwiches/">Sandwiches</a>
+          <a href="../delivery/">Delivery</a>
+          <a href="../breakfast/">Breakfast</a>
+          <a href="../hours/">Hours</a>
+          <a href="../nutrition/">Nutrition</a>
+          <a href="../soups/">Soups</a>
+          <a href="./" aria-current="page">Pick Two</a>
+          <a href="../salads/">Salads</a>
+          <a href="../drinks/">Drinks</a>
+          <a href="../catering/">Catering</a>
+          <a href="../gluten-free/">Gluten Free</a>
+          <a href="../boxed-lunches/">Boxed Lunches</a>
+          <a href="../vegan/">Vegan</a>
+          <a href="../vegetarian/">Vegetarian</a>
+          <a href="../healthy/">Healthy</a>
+          <a href="../best/">Best Items</a>
+          <a href="../breakfast-catering/">Breakfast Catering</a>
+      <a href="../menu-pdf/">Menu PDF</a>
+      <a href="../coffee/">Coffee</a>
+          <a href="../#decide">Decide</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-acc btn-sm" href="#builder" style="margin-left:auto">Build Your Combo</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <span id="top"></span>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="wrap">
+          <p class="badge">Panera You Pick Two guide &middot; 2026 menu</p>
+          <h1 id="page-title">Panera You Pick Two: Build Your Perfect Combo (2026)</h1>
+          <p class="lede"><strong>Pick any two halves. See the real combined calories, protein, and sodium before you order.</strong> Every other site hands you a wall of halves and makes you do the math. This page does the math for you: estimates are badged, and the math is honest. The halves here come from <a href="../">the whole Panera menu</a>, and the homepage maps every full portion they are cut from.</p>
+<p class="lede entity-def">You Pick Two is Panera Bread&#x27;s combo program: any half sandwich, cup of soup, or half salad, paired as one combo and priced at the cafe. This builder covers the 33 eligible items with official full-portion nutrition. Half portions are estimated at half of the full portion and badged; soup is shown at face value as the cup size.</p>
+          <div class="hero-quick" aria-label="Quick answers">
+            <a class="quick-chip" href="#builder"><span class="qm">440 cal</span><span class="qx"><strong>Lightest combo</strong>half Mediterranean Veggie + cup Chicken Noodle, estimated</span></a>
+            <a class="quick-chip" href="#combos"><span class="qm">52g</span><span class="qx"><strong>Most protein combo</strong>half French Ciabatta Dipper + cup Lasagna Soup, estimated</span></a>
+            <a class="quick-chip" href="#compare"><span class="qm">3 ways</span><span class="qx"><strong>Pick Two vs Duets vs Mix &amp; Match</strong>the honest compare</span></a>
+            <a class="quick-chip" href="#how"><span class="qm">10:30am</span><span class="qx"><strong>Lunch starts</strong>not a breakfast item</span></a>
+          </div>
+          <p class="trust">Independent guide, not affiliated with Panera. Panera publishes no nutrition for halves: every half number on this page is an estimate. Full-item prices are 9-city averages checked September 30, 2026; your Pick Two combo price is set at the cafe and varies.</p>
+        </div>
+      </section>
+
+      <section id="builder" class="alt" aria-labelledby="builder-title" style="padding-top:2.5rem">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">The centerpiece</p>
+            <h2 id="builder-title">Build your Pick Two</h2>
+            <p>Two pickers, 33 items, one honest total. Sandwich and salad halves are estimated at half the full portion; the soup is the cup, shown as listed. Every total is badged, because Panera does not publish half numbers and nobody should pretend otherwise.</p>
+          </div>
+
+          <div class="builder">
+            <div class="builder-head">
+              <h3>Your combo, before you order it</h3>
+              <p>Change either side and the totals update instantly. Verdicts flag the trades: light, protein-packed, or sodium watch.</p>
+            </div>
+            <div class="builder-body">
+              <div class="pickers">
+                <div class="picker" id="picker-a">
+                  <h4>Pick one</h4>
+                  <div class="ctabs" role="tablist" aria-label="First pick category">
+                    <button class="ctab" type="button" role="tab" data-cat="sandwich" aria-selected="true">Half Sandwich</button>
+                    <button class="ctab" type="button" role="tab" data-cat="soup" aria-selected="false">Cup of Soup</button>
+                    <button class="ctab" type="button" role="tab" data-cat="salad" aria-selected="false">Half Salad</button>
+                  </div>
+                  <select id="select-a" aria-label="First pick item"></select>
+                  <p class="picker-read" id="read-a"></p>
+                </div>
+                <span class="plus" aria-hidden="true">+</span>
+                <div class="picker" id="picker-b">
+                  <h4>Pick two</h4>
+                  <div class="ctabs" role="tablist" aria-label="Second pick category">
+                    <button class="ctab" type="button" role="tab" data-cat="sandwich" aria-selected="false">Half Sandwich</button>
+                    <button class="ctab" type="button" role="tab" data-cat="soup" aria-selected="true">Cup of Soup</button>
+                    <button class="ctab" type="button" role="tab" data-cat="salad" aria-selected="false">Half Salad</button>
+                  </div>
+                  <select id="select-b" aria-label="Second pick item"></select>
+                  <p class="picker-read" id="read-b"></p>
+                </div>
+              </div>
+
+              <div class="totals" aria-live="polite">
+              <p id="combo-summary" class="combo-summary" style="grid-column:1/-1;margin:0;color:var(--text-soft);font-size:.95rem">Half Mediterranean Veggie plus a cup of Homestyle Chicken Noodle Soup: about 440 calories and 23g protein, estimated.</p>
+                <div class="total"><span class="v" id="tot-cal">0</span><span class="k">calories <span class="est"><span class="est-dot"></span>estimated</span></span></div>
+                <div class="total"><span class="v" id="tot-pro">0g</span><span class="k">protein <span class="est"><span class="est-dot"></span>estimated</span></span></div>
+                <div class="total"><span class="v" id="tot-sod">0mg</span><span class="k">sodium <span class="est"><span class="est-dot"></span>estimated</span></span></div>
+                <div class="total"><span class="v" id="tot-price" style="font-size:1.35rem">$0.00</span><span class="k">the two full items, for reference: combo price varies by cafe</span></div>
+              </div>
+              <ul class="verdicts" id="verdicts"></ul>
+              <p class="builder-note"><b>How to read this:</b> halves are exactly half of Panera&rsquo;s official full-portion numbers, rounded. The soup cup is shown as listed, since the cup is the Pick Two soup size. Real halves vary a little in the kitchen. The two full-item prices are 9-city averages shown for reference only: <b>your Pick Two combo price is set at the cafe and varies</b>, and this page never invents a half price.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" aria-labelledby="how-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">How it works</p>
+            <h2 id="how-title">Three steps, no surprises</h2>
+            <p>You Pick Two has survived every menu refresh for a reason: it is the rare deal where you actually choose.</p>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <span class="n">1</span>
+              <h3>Pick any two halves</h3>
+              <p>Choose any two from half sandwich, cup of soup, or half salad. Same category twice is fine: two soups is a legitimate order. The builder above covers all 33 eligible items. A half sandwich is half of a full Panera sandwich; a half salad is half of a full Panera salad; the soup is the cup size.</p>
+            </article>
+            <article class="step">
+              <span class="n">2</span>
+              <h3>Priced as one combo</h3>
+              <p>The two halves ring up together as one combo, not as two separate full items. The combo price is set at the cafe and varies by location: check your cafe for the exact figure.</p>
+            </article>
+            <article class="step">
+              <span class="n">3</span>
+              <h3>Plus your side choice</h3>
+              <p>The combo comes with your side choice. One timing note: this is a lunch menu item. There is no Pick Two at breakfast; the lunch menu starts around 10:30am.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="combos" class="alt" aria-labelledby="combos-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">Do not want to build?</p>
+            <h2 id="combos-title">5 ready-made combos, decided for you</h2>
+            <p>Every number below is estimated from the official full portions and badged. Tap &ldquo;load in builder&rdquo; to see any combo live and swap one side.</p>
+          </div>
+          <div class="cards">
+            <article itemscope itemtype="https://schema.org/MenuItem" class="card">
+              <span class="tag">Lightest</span>
+              <h3>The lightest lunch that still eats like lunch</h3>
+              <p class="combo">Half Mediterranean Veggie + Cup Chicken Noodle Soup</p>
+              <div class="big-num"><span class="cal">440 cal</span><span class="est"><span class="est-dot"></span>estimated</span></div>
+              <ul class="chips"><li class="chip">23g protein, estimated</li><li class="chip">2,200mg sodium, estimated</li><li class="chip price">Full items $8.12 + $8.13: combo price varies by cafe</li></ul>
+              <p class="when"><b>Order this when:</b> you want the lightest combo on the page. The honest catch is sodium: even the lightest pairing carries most of a day&rsquo;s worth, so keep the rest of the day gentle.</p>
+              <button class="load" type="button" data-a="Mediterranean Veggie" data-b="Homestyle Chicken Noodle Soup">Load in builder</button>
+            <p class="why entity-desc" itemprop="description" style="font-size:.88rem;color:var(--text-muted);margin:.45rem 0 0">Lightest is a You Pick Two combination at Panera Bread: Half Mediterranean Veggie plus a cup of Homestyle Chicken Noodle Soup. Estimated total: about 440 calories and 23g protein. Halves estimated at half of full portions; soup at face value.</p><meta itemprop="name" content="Lightest: Half Mediterranean Veggie + Cup Homestyle Chicken Noodle Soup"></article>
+            <article itemscope itemtype="https://schema.org/MenuItem" class="card">
+              <span class="tag">Protein max</span>
+              <h3>Maximum protein in two halves</h3>
+              <p class="combo">Half French Ciabatta Dipper + Cup Three Cheese Lasagna Soup</p>
+              <div class="big-num"><span class="cal">980 cal</span><span class="est"><span class="est-dot"></span>estimated</span></div>
+              <ul class="chips"><li class="chip">52g protein, estimated</li><li class="chip">2,940mg sodium, estimated</li><li class="chip price">Full items $11.88 + $8.29: combo price varies by cafe</li></ul>
+              <p class="when"><b>Order this when:</b> protein is the whole point. 52g in a Pick Two is not listed, and the sodium flag is the trade you are accepting.</p>
+              <button class="load" type="button" data-a="French Ciabatta Dipper" data-b="Three Cheese Lasagna Soup">Load in builder</button>
+            <p class="why entity-desc" itemprop="description" style="font-size:.88rem;color:var(--text-muted);margin:.45rem 0 0">Protein Max is a You Pick Two combination at Panera Bread: Half French Ciabatta Dipper plus a cup of Three Cheese Lasagna Soup. Estimated total: about 980 calories and 52g protein. Halves estimated at half of full portions; soup at face value.</p><meta itemprop="name" content="Protein Max: Half French Ciabatta Dipper + Cup Three Cheese Lasagna Soup"></article>
+            <article itemscope itemtype="https://schema.org/MenuItem" class="card">
+              <span class="tag">Comfort</span>
+              <h3>The classic pairing, done right</h3>
+              <p class="combo">Half Grilled Cheese + Cup Creamy Tomato Soup</p>
+              <div class="big-num"><span class="cal">745 cal</span><span class="est"><span class="est-dot"></span>estimated</span></div>
+              <ul class="chips"><li class="chip">20g protein, estimated</li><li class="chip">2,380mg sodium, estimated</li><li class="chip price">Full items $8.08 + $8.16: combo price varies by cafe</li></ul>
+              <p class="when"><b>Order this when:</b> it is cold, it is raining, or the day needs fixing. This is the comfort order, and it knows it.</p>
+              <button class="load" type="button" data-a="Grilled Cheese" data-b="Creamy Tomato Soup">Load in builder</button>
+            <p class="why entity-desc" itemprop="description" style="font-size:.88rem;color:var(--text-muted);margin:.45rem 0 0">Comfort is a You Pick Two combination at Panera Bread: Half Grilled Cheese plus a cup of Creamy Tomato Soup. Estimated total: about 745 calories and 20g protein. Halves estimated at half of full portions; soup at face value.</p><meta itemprop="name" content="Comfort: Half Grilled Cheese + Cup Creamy Tomato Soup"></article>
+            <article itemscope itemtype="https://schema.org/MenuItem" class="card">
+              <span class="tag">Balanced</span>
+              <h3>Real protein, real vegetables</h3>
+              <p class="combo">Half Turkey &amp; Cheddar + Half Farmhouse Crunch Salad</p>
+              <div class="big-num"><span class="cal">815 cal</span><span class="est"><span class="est-dot"></span>estimated</span></div>
+              <ul class="chips"><li class="chip">29g protein, estimated</li><li class="chip">1,650mg sodium, estimated</li><li class="chip price">Full items $9.93 + $9.76: combo price varies by cafe</li></ul>
+              <p class="when"><b>Order this when:</b> you want the balanced lunch: real protein with an actual salad next to it, and the gentlest sodium of any combo on this page.</p>
+              <button class="load" type="button" data-a="Turkey &amp; Cheddar Sandwich" data-b="Farmhouse Crunch Salad">Load in builder</button>
+            <p class="why entity-desc" itemprop="description" style="font-size:.88rem;color:var(--text-muted);margin:.45rem 0 0">Balanced is a You Pick Two combination at Panera Bread: Half Turkey &amp; Cheddar Sandwich plus Half Farmhouse Crunch Salad. Estimated total: about 815 calories and 29g protein. Halves estimated at half of full portions; soup at face value.</p><meta itemprop="name" content="Balanced: Half Turkey &amp; Cheddar Sandwich + Half Farmhouse Crunch Salad"></article>
+            <article itemscope itemtype="https://schema.org/MenuItem" class="card">
+              <span class="tag">Soup lover</span>
+              <h3>Two soups, no sandwich required</h3>
+              <p class="combo">Cup Broccoli Cheddar + Cup Bistro French Onion</p>
+              <div class="big-num"><span class="cal">720 cal</span><span class="est"><span class="est-dot"></span>estimated</span></div>
+              <ul class="chips"><li class="chip">22g protein, estimated</li><li class="chip">3,340mg sodium, estimated</li><li class="chip price">Full items $8.13 + $8.13: combo price varies by cafe</li></ul>
+              <p class="when"><b>Order this when:</b> you are here for the soups and only the soups. Enjoy it, and plan a low-sodium dinner: this pairing alone passes the full daily value.</p>
+              <button class="load" type="button" data-a="Broccoli Cheddar Soup" data-b="Bistro French Onion Soup">Load in builder</button>
+            <p class="why entity-desc" itemprop="description" style="font-size:.88rem;color:var(--text-muted);margin:.45rem 0 0">Soup Lover is a You Pick Two combination at Panera Bread: a cup of Broccoli Cheddar Soup plus a cup of Bistro French Onion Soup. Estimated total: about 720 calories and 22g protein. Halves estimated at half of full portions; soup at face value.</p><meta itemprop="name" content="Soup Lover: Cup Broccoli Cheddar Soup + Cup Bistro French Onion Soup"></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="compare" aria-labelledby="compare-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">Choose your deal</p>
+            <h2 id="compare-title">You Pick Two vs Value Duets vs Mix &amp; Match</h2>
+            <p>Three ways to buy two things at Panera. They are not the same deal, and the difference is choice.</p>
+          </div>
+          <div class="compare">
+            <article class="cmp hero-cmp">
+              <span class="c-tag">Full choice</span>
+              <h3>You Pick Two</h3>
+              <span class="c-price">Combo price varies by cafe</span>
+              <p>Any two halves from half sandwiches, cups of soup, and half salads: your pairing, your math. The broadest choice on the lunch menu.</p>
+              <p class="c-verdict">Pick this when the pairing matters more than a fixed price.</p>
+            </article>
+            <article class="cmp plain">
+              <span class="c-tag">Fixed pairings</span>
+              <h3>Value Duets</h3>
+              <span class="c-price">Typically $6.99 to $8.99</span>
+              <p>Pre-set pairings at fixed prices. You trade freedom for certainty: the pairing is chosen for you, the price is known before you walk in.</p>
+              <p class="c-verdict">Pick this when you want a known price and an easy yes.</p>
+            </article>
+            <article class="cmp plain">
+              <span class="c-tag">Selected items</span>
+              <h3>Mix &amp; Match</h3>
+              <span class="c-price">About $4.99 each</span>
+              <p>Selected individual items at a flat per-item price. Build a meal piece by piece from the eligible list rather than pairing halves.</p>
+              <p class="c-verdict">Pick this when the eligible list already holds what you wanted.</p>
+            </article>
+          </div>
+          <p class="cmp-note">Duets and Mix &amp; Match prices are reported figures from menu reporting: they vary by cafe and change with promotions, so verify at your local cafe before you count on them. Pick Two&rsquo;s combo price likewise varies by cafe.</p>
+        </div>
+      </section>
+      <section class="journey-next" aria-label="Where to go next" style="max-width:46rem;margin:2.5rem auto;padding:0 1rem;"><div style="border:1px solid var(--border,#e5ddd0);border-radius:14px;padding:1.25rem 1.4rem;background:var(--bg-alt,#faf6ef);">
+            <p style="font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text,#8a5a2b);margin:0 0 .6rem;font-weight:700;">Where your next question leads</p>
+            <p>Starting with soup? <a href="../soups/">Browse the soups that work best in a pairing</a>. Prefer something fresh on the side? <a href="../salads/">See which salads pair cleanly in a You Pick Two</a>.</p>
+            <p>Want the sandwich half to do the heavy lifting? <a href="../sandwiches/">Compare the sandwiches worth choosing as your half</a>.</p>
+          </div></section>
+
+
+      <section id="faq" class="alt" aria-labelledby="faq-title">
+        <div class="wrap">
+          <div class="sec-head" style="margin-left:auto;margin-right:auto;text-align:center">
+            <p class="kicker">Questions, answered</p>
+            <h2 id="faq-title">Frequently Asked Questions</h2>
+          </div>
+          <ul class="faq-list">
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>How does You Pick Two work at Panera?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>Pick any two halves from three categories: half sandwich, cup of soup, or half salad. They are priced together as one combo at the cafe, and the combo comes with your side choice. It is a lunch menu item: it is not available during breakfast hours, and the lunch menu starts around 10:30am.</p></div>
+            </li>
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>How many calories are in a Panera Pick Two?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>It depends entirely on the combo. Light pairings land in the 400s: a half Mediterranean Veggie with a cup of Chicken Noodle Soup is about 440 estimated calories. Heavy pairings approach 1,000: a half French Ciabatta Dipper with a cup of Three Cheese Lasagna Soup is about 980 estimated calories. Panera does not publish nutrition for halves, so every half figure here is an estimate. Use the builder above to check your own combo.</p></div>
+            </li>
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>Can I pick any two items for You Pick Two?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>You can pick any two halves from the three categories: half sandwiches, cups of soup, and half salads. Picking from the same category twice, for example two cups of soup, is allowed where your cafe offers it. Specific items vary by cafe and by day, and seasonal items rotate.</p></div>
+            </li>
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>Is Pick Two cheaper than ordering two full items?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>Yes, in the sense that two halves are priced together as one combo rather than as two separate full items. The exact combo price is set at the cafe and varies by location, so this page never invents a half price: it shows the full-item 9-city average as a reference and tells you to check your cafe.</p></div>
+            </li>
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>What is the difference between You Pick Two and Value Duets?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>You Pick Two is the full-choice option: any two halves from the three categories, priced as one combo at the cafe. Value Duets are pre-set pairings at fixed prices, typically reported around $6.99 to $8.99. Mix &amp; Match is built from selected items at about $4.99 each. Duets and Mix &amp; Match trade choice for a fixed price; Pick Two trades the fixed price for freedom.</p></div>
+            </li>
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>Can I get You Pick Two at breakfast?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>No. You Pick Two is part of the lunch menu, which starts around 10:30am at most cafes. It is not available during breakfast hours.</p></div>
+            </li>
+            <li class="faq">
+              <button class="faq-q" type="button" aria-expanded="false"><span>Are the halves in You Pick Two really half?</span><span class="pm" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="7" y1="1.5" x2="7" y2="12.5"/><line x1="1.5" y1="7" x2="12.5" y2="7"/></svg></span></button>
+              <div class="faq-a"><p>Panera does not publish nutrition for halves, so this page estimates every half as exactly half of the official full portion: calories, protein, and sodium are halved and rounded, and every estimated figure carries a visible estimated badge. Real halves vary a little in the kitchen, so treat the numbers as a planning estimate, not a lab result.</p></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="xlinks-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">Go deeper</p>
+            <h2 id="xlinks-title">The full numbers behind the halves</h2>
+            <p>Every estimate on this page starts from a verified full portion. Here is where those numbers live.</p>
+          </div>
+          <div class="xlinks">
+            <a class="xlink" href="../sandwiches/"><strong>All 20 sandwiches</strong><span>full sandwich prices, protein, and sodium: the source of every half sandwich above.</span></a>
+            <a class="xlink" href="../soups/"><strong>All 10 soups</strong><span>broth vs creamy, the new Lasagna Soup, and the sodium caveat: every cup, verified.</span></a>
+            <a class="xlink" href="../nutrition/"><strong>Full nutrition table</strong><span>247 items taken from the official guide: search, sort, and filter by your goal.</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="foot-brand">Panera Menu <b>Guide</b></div>
+        <nav class="foot-links" aria-label="Footer">
+          <a href="../#finder">Find Your Pick</a>
+          <a href="../#categories">Menu by Category</a>
+          <a href="../locations/">Locations</a>
+          <a href="../sandwiches/">Sandwiches</a>
+          <a href="../delivery/">Delivery</a>
+          <a href="../breakfast/">Breakfast</a>
+          <a href="../hours/">Hours</a>
+          <a href="../nutrition/">Nutrition</a>
+          <a href="../soups/">Soups</a>
+          <a href="./">Pick Two</a>
+          <a href="../salads/">Salads</a>
+          <a href="../drinks/">Drinks</a>
+          <a href="../catering/">Catering</a>
+          <a href="../gluten-free/">Gluten Free</a>
+          <a href="../boxed-lunches/">Boxed Lunches</a>
+          <a href="../vegan/">Vegan</a>
+          <a href="../vegetarian/">Vegetarian</a>
+          <a href="../healthy/">Healthy</a>
+          <a href="../best/">Best Items</a>
+          <a href="../breakfast-catering/">Breakfast Catering</a>
+      <a href="../menu-pdf/">Menu PDF</a>
+      <a href="../coffee/">Coffee</a>
+          <a href="../#decide">Decide in 30 Seconds</a>
+          <a href="#faq">FAQ</a>
+          <a href="#top">Back to top</a>
+      <a href="../about/">About</a>
+      <a href="../contact/">Contact</a>
+      <a href="../disclaimer/">Disclaimer</a>
+      <a href="../privacy/">Privacy Policy</a>
+      <a href="../terms/">Terms</a>
+    </nav>
+        <div class="disclaimer">
+          <p>Independent guide. Not affiliated with or endorsed by Panera Bread. Prices are 9-city averages (San Diego, Los Angeles, and New York excluded): your cafe may vary.</p>
+          <p>Prices checked September 30, 2026 &middot; Nutrition: Panera&rsquo;s official guide, effective September 2, 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+    (function () {
+      'use strict';
+
+      var POOL = [
+        {"item":"Bacon Turkey Bravo","cat":"Cold Sandwiches","price":11.81,"cal":860,"protein":47,"sodium":2430,"pool":"sandwich"},
+        {"item":"Cranberry Walnut Chicken Salad Sandwich","cat":"Cold Sandwiches","price":9.23,"cal":690,"protein":32,"sodium":970,"pool":"sandwich"},
+        {"item":"Grilled Chicken & Avo BLT","cat":"Cold Sandwiches","price":12.56,"cal":940,"protein":48,"sodium":1750,"pool":"sandwich"},
+        {"item":"Mediterranean Veggie","cat":"Cold Sandwiches","price":8.12,"cal":520,"protein":18,"sodium":1260,"pool":"sandwich"},
+        {"item":"Tomato Basil BLT","cat":"Cold Sandwiches","price":9.37,"cal":780,"protein":23,"sodium":1560,"pool":"sandwich"},
+        {"item":"Tuna Salad Sandwich","cat":"Cold Sandwiches","price":9.93,"cal":590,"protein":24,"sodium":1200,"pool":"sandwich"},
+        {"item":"Turkey & Cheddar Sandwich","cat":"Cold Sandwiches","price":9.93,"cal":840,"protein":40,"sodium":2110,"pool":"sandwich"},
+        {"item":"Chicken Bacon Rancher","cat":"Hot Sandwiches","price":11.73,"cal":1010,"protein":52,"sodium":2440,"pool":"sandwich"},
+        {"item":"Chicken Pesto Ciabatta Dipper","cat":"Hot Sandwiches","price":9.96,"cal":1010,"protein":59,"sodium":2570,"pool":"sandwich"},
+        {"item":"Chicken Roma Asiago Bagel Stack","cat":"Hot Sandwiches","price":8.1,"cal":610,"protein":31,"sodium":1120,"pool":"sandwich"},
+        {"item":"Chipotle Chicken Avo Melt","cat":"Hot Sandwiches","price":11.87,"cal":1000,"protein":43,"sodium":2550,"pool":"sandwich"},
+        {"item":"Ciabatta Cheesesteak","cat":"Hot Sandwiches","price":12.65,"cal":1160,"protein":52,"sodium":2090,"pool":"sandwich"},
+        {"item":"French Ciabatta Dipper","cat":"Hot Sandwiches","price":11.88,"cal":1240,"protein":66,"sodium":2960,"pool":"sandwich"},
+        {"item":"Grilled Cheese","cat":"Hot Sandwiches","price":8.08,"cal":810,"protein":32,"sodium":2540,"pool":"sandwich"},
+        {"item":"Smokehouse BBQ Chicken","cat":"Hot Sandwiches","price":9.87,"cal":820,"protein":45,"sodium":2390,"pool":"sandwich"},
+        {"item":"Spicy Fiesta Chicken","cat":"Hot Sandwiches","price":11.66,"cal":940,"protein":51,"sodium":1970,"pool":"sandwich"},
+        {"item":"Spicy Steak Asiago Bagel Stack","cat":"Hot Sandwiches","price":8.1,"cal":630,"protein":39,"sodium":1480,"pool":"sandwich"},
+        {"item":"Toasted Caprese Focaccia","cat":"Hot Sandwiches","price":9.7,"cal":740,"protein":30,"sodium":1480,"pool":"sandwich"},
+        {"item":"Toasted Frontega Chicken","cat":"Hot Sandwiches","price":11.73,"cal":860,"protein":40,"sodium":2430,"pool":"sandwich"},
+        {"item":"Toasted Italiano","cat":"Hot Sandwiches","price":12.55,"cal":1330,"protein":58,"sodium":4110,"pool":"sandwich"},
+        {"item":"Farmhouse Crunch Salad","cat":"Salads","price":9.76,"cal":790,"protein":18,"sodium":1190,"pool":"salad"},
+        {"item":"Greek Salad","cat":"Salads","price":8.82,"cal":630,"protein":8,"sodium":1400,"pool":"salad"},
+        {"item":"Harvest Medley Salad","cat":"Salads","price":9.73,"cal":750,"protein":12,"sodium":870,"pool":"salad"},
+        {"item":"Autumn Squash Soup","cat":"Soups & Mac","price":8.22,"cal":330,"protein":8,"sodium":1210,"pool":"soup"},
+        {"item":"Bacon Mac & Cheese","cat":"Soups & Mac","price":11.57,"cal":1050,"protein":36,"sodium":2620,"pool":"soup"},
+        {"item":"Bistro French Onion Soup","cat":"Soups & Mac","price":8.13,"cal":300,"protein":10,"sodium":1820,"pool":"soup"},
+        {"item":"Broccoli Cheddar Soup","cat":"Soups & Mac","price":8.13,"cal":420,"protein":12,"sodium":1520,"pool":"soup"},
+        {"item":"Cream of Chicken & Wild Rice Soup","cat":"Soups & Mac","price":8.13,"cal":300,"protein":9,"sodium":1400,"pool":"soup"},
+        {"item":"Creamy Tomato Soup","cat":"Soups & Mac","price":8.16,"cal":340,"protein":4,"sodium":1110,"pool":"soup"},
+        {"item":"Homestyle Chicken Noodle Soup","cat":"Soups & Mac","price":8.13,"cal":180,"protein":14,"sodium":1570,"pool":"soup"},
+        {"item":"Mac & Cheese","cat":"Soups & Mac","price":10.26,"cal":980,"protein":32,"sodium":2300,"pool":"soup"},
+        {"item":"Rustic Baked Potato Soup","cat":"Soups & Mac","price":8.29,"cal":430,"protein":14,"sodium":1660,"pool":"soup"},
+        {"item":"Three Cheese Lasagna Soup","cat":"Soups & Mac","price":8.29,"cal":360,"protein":19,"sodium":1460,"pool":"soup"}
+      ];
+      var EST = '<span class="est"><span class="est-dot"></span>estimated</span>';
+
+      function byPool(pool) { return POOL.filter(function (i) { return i.pool === pool; }); }
+      function findItem(name) { for (var i = 0; i < POOL.length; i++) { if (POOL[i].item === name) return POOL[i]; } return null; }
+      function portion(item) {
+        if (item.pool === 'soup') return { cal: item.cal, pro: item.protein, sod: item.sodium, label: 'Cup' };
+        return { cal: Math.round(item.cal / 2), pro: Math.round(item.protein / 2), sod: Math.round(item.sodium / 2), label: 'Half' };
+      }
+      function fmt(n) { return n.toLocaleString('en-US'); }
+
+      function makePicker(rootId, selectId, readId, defPool, defItem) {
+        var root = document.getElementById(rootId);
+        var sel = document.getElementById(selectId);
+        var read = document.getElementById(readId);
+        var state = { pool: defPool, item: defItem };
+        function fill() {
+          var items = byPool(state.pool);
+          sel.innerHTML = '';
+          items.forEach(function (it) {
+            var o = document.createElement('option');
+            o.value = it.item; o.textContent = it.item;
+            if (it.item === state.item) o.selected = true;
+            sel.appendChild(o);
+          });
+          if (!findItem(state.item) || findItem(state.item).pool !== state.pool) {
+            state.item = items[0].item; sel.value = state.item;
+          }
+          render();
+        }
+        function render() {
+          var it = findItem(sel.value); state.item = sel.value;
+          var p = portion(it);
+          read.innerHTML = '<strong>' + p.label + ' ' + it.item + ':</strong> ' + fmt(p.cal) + ' cal, ' + fmt(p.pro) + 'g protein, ' + fmt(p.sod) + 'mg sodium ' + EST + '<br>Full item $' + it.price.toFixed(2) + ' (9-city avg): combo price varies by cafe';
+          update();
+        }
+        root.querySelectorAll('.ctab').forEach(function (b) {
+          b.addEventListener('click', function () {
+            root.querySelectorAll('.ctab').forEach(function (x) { x.setAttribute('aria-selected', 'false'); });
+            b.setAttribute('aria-selected', 'true');
+            state.pool = b.getAttribute('data-cat');
+            var items = byPool(state.pool);
+            state.item = items[0].item;
+            fill();
+          });
+          if (b.getAttribute('data-cat') === defPool) b.setAttribute('aria-selected', 'true'); else b.setAttribute('aria-selected', 'false');
+        });
+        sel.addEventListener('change', render);
+        fill();
+        return { set: function (name) {
+          var it = findItem(name); if (!it) return;
+          state.pool = it.pool; state.item = name;
+          root.querySelectorAll('.ctab').forEach(function (x) { x.setAttribute('aria-selected', x.getAttribute('data-cat') === it.pool ? 'true' : 'false'); });
+          fill();
+        }, get: function () { var it = findItem(state.item); return it; } };
+      }
+
+      var pickA = makePicker('picker-a', 'select-a', 'read-a', 'sandwich', 'Mediterranean Veggie');
+      var pickB = makePicker('picker-b', 'select-b', 'read-b', 'soup', 'Homestyle Chicken Noodle Soup');
+
+      function update() {
+        var a = pickA.get(), b = pickB.get();
+        if (!a || !b) return;
+        var pa = portion(a), pb = portion(b);
+        var cal = pa.cal + pb.cal, pro = pa.pro + pb.pro, sod = pa.sod + pb.sod;
+        var summ = document.getElementById('combo-summary'); if (summ) { summ.textContent = pa.label + ' ' + a.item + ' plus ' + (pb.label === 'Cup' ? 'a cup of ' : pb.label + ' ') + b.item + ': about ' + fmt(cal) + ' calories and ' + fmt(pro) + 'g protein, estimated.'; }
+        document.getElementById('tot-cal').textContent = fmt(cal);
+        document.getElementById('tot-pro').textContent = fmt(pro) + 'g';
+        document.getElementById('tot-sod').textContent = fmt(sod) + 'mg';
+        document.getElementById('tot-price').textContent = '$' + (a.price + b.price).toFixed(2);
+        var v = [];
+        if (cal < 500) v.push('<li class="verdict good">Light lunch: under 500 estimated calories</li>');
+        if (pro >= 30) v.push('<li class="verdict good">Protein-packed: 30g+ estimated protein</li>');
+        if (sod > 1500) v.push('<li class="verdict warn">Sodium watch: this combo carries over half the daily value</li>');
+        if (!v.length) v.push('<li class="verdict neutral">A middle-path combo: no single flag, just a solid lunch</li>');
+        document.getElementById('verdicts').innerHTML = v.join('');
+      }
+
+      document.querySelectorAll('.card .load').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          pickA.set(btn.getAttribute('data-a'));
+          pickB.set(btn.getAttribute('data-b'));
+          document.getElementById('builder').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      document.querySelectorAll('.faq-q').forEach(function (btn) {
+        var panel = btn.parentElement.querySelector('.faq-a');
+        btn.addEventListener('click', function () {
+          var open = btn.getAttribute('aria-expanded') === 'true';
+          document.querySelectorAll('.faq-q').forEach(function (b) {
+            b.setAttribute('aria-expanded', 'false');
+            b.parentElement.querySelector('.faq-a').style.maxHeight = '0px';
+          });
+          if (!open) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+          }
+        });
+      });
+    })();
+    </script>
+  </body>
+</html>
