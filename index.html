@@ -374,6 +374,18 @@
       .disclaimer { color: #A99F88; font-size: .83rem; border-top: 1px solid rgba(217,164,65,.25); padding-top: 1.25rem; }
       .disclaimer p { margin: 0 0 .5rem; }
       .disclaimer p:last-child { margin: 0; }
+
+    /* ============ IMAGES (2026-10-08) ============ */
+    .hero-img { margin: 0; }
+    .hero-img img { width: 100%; height: auto; border-radius: 16px; display: block; }
+    .decide-row::after { content: ""; display: table; clear: both; }
+    .decide-thumb { width: 104px; height: 78px; object-fit: cover; border-radius: 10px; float: right; margin: 0 0 .6rem 1rem; }
+    .cat-hero { margin: 1.6rem 0 0; }
+    .cat-hero img { width: 100%; height: auto; border-radius: 16px; display: block; }
+    .img-credit { font-size: .78rem; }
+    .credit-block { background: var(--surface-warm); border-top: 1px solid var(--line); padding: 1.4rem 0; font-size: .86rem; color: #8d8471; }
+    .credit-block p { margin: 0; }
+    @media (max-width: 640px) { .decide-thumb { width: 84px; height: 64px; } }
     </style>
   </head>
   <body>
@@ -463,6 +475,9 @@
             <p class="pick-scope">Single-serve meals ranked: full scope under the tool below.</p>
           </div>
         </div>
+        <div class="wrap">
+          <figure class="hero-img"><img src="images/hero-panera-spread.jpg" alt="Panera Bread menu spread with sandwiches, soup, salad and fresh bakery items" loading="lazy" width="1400" height="935"></figure>
+        </div>
       </section>
 
       <div class="stats" aria-label="Coverage at a glance">
@@ -521,42 +536,50 @@
             <p>Eight goals, eight orders. The honest version: trade-offs included. If your goal is eating lighter without feeling shortchanged, see <a href="healthy/">the healthiest picks that still feel like a real meal</a>.</p>
           </div>
           <div class="decide-panel">
-            <div class="decide-row">
+            <div class="decide-row" data-decide-img="0">
+              <img class="decide-thumb" src="images/french-ciabatta-dipper.jpg" alt="French Ciabatta Dipper sandwich with tomato soup for dipping" loading="lazy">
               <div class="decide-goal">The most protein, period</div>
               <div class="decide-order">French Ciabatta Dipper <span class="dp">$11.88</span></div>
               <p class="decide-why">66g protein, the most in any single-serve meal we rank. (2,960mg sodium: it&rsquo;s a sometimes food.)</p>
             </div>
-            <div class="decide-row">
+            <div class="decide-row" data-decide-img="1">
+              <img class="decide-thumb" src="images/chicken-pesto-ciabatta-dipper.jpg" alt="Chicken Pesto Ciabatta Dipper with melted provolone and soup" loading="lazy">
               <div class="decide-goal">The most protein per dollar</div>
               <div class="decide-order">Chicken Pesto Ciabatta Dipper <span class="dp">$9.96</span></div>
               <p class="decide-why">5.92g protein per dollar, 59g total. Nothing else is close.</p>
             </div>
-            <div class="decide-row">
+            <div class="decide-row" data-decide-img="2">
+              <img class="decide-thumb" src="images/homestyle-chicken-noodle-soup.jpg" alt="Bowl of Homestyle Chicken Noodle Soup" loading="lazy">
               <div class="decide-goal">The lightest real meal</div>
               <div class="decide-order">Homestyle Chicken Noodle Soup <span class="dp">$8.13</span></div>
               <p class="decide-why">180 cal, 14g protein.</p>
             </div>
-            <div class="decide-row">
+            <div class="decide-row" data-decide-img="3">
+              <img class="decide-thumb" src="images/greek-yogurt-berries-parfait.jpg" alt="Greek yogurt parfait with fresh berries and granola" loading="lazy">
               <div class="decide-goal">The lowest sodium</div>
               <div class="decide-order">Greek Yogurt with Berries Parfait <span class="dp">$5.63</span></div>
               <p class="decide-why">250 cal, 15g protein, 80mg sodium.</p>
             </div>
-            <div class="decide-row">
+            <div class="decide-row" data-decide-img="4">
+              <img class="decide-thumb" src="images/farmhouse-duo-asiago-bagel-stack.jpg" alt="Farmhouse Duo breakfast sandwich on an asiago bagel" loading="lazy">
               <div class="decide-goal">The best breakfast</div>
               <div class="decide-order">Farmhouse Duo Asiago Bagel Stack <span class="dp">$7.03</span></div>
               <p class="decide-why">34g protein, 4.83g/$, $7.03.</p>
             </div>
-            <div class="decide-row">
+            <div class="decide-row" data-decide-img="5">
+              <img class="decide-thumb" src="images/chicken-pesto-ciabatta-dipper.jpg" alt="Chicken Pesto Ciabatta Dipper with melted provolone and soup" loading="lazy">
               <div class="decide-goal">The cheapest full meal</div>
               <div class="decide-order">Chicken Pesto Ciabatta Dipper <span class="dp">$9.96</span></div>
               <p class="decide-why">59g protein under $10. No contest.</p>
             </div>
-            <div class="decide-row">
+            <div class="decide-row" data-decide-img="6">
+              <img class="decide-thumb" src="images/kids-turkey-cheese.jpg" alt="Kids turkey and cheese sandwich with apple slices" loading="lazy">
               <div class="decide-goal">Feeding the kids</div>
               <div class="decide-order">Kids Turkey &amp; Cheese <span class="dp">$7.29</span></div>
               <p class="decide-why">40g protein. (Sodium is adult-level: 2,250mg.)</p>
             </div>
-            <div class="decide-row">
+            <div class="decide-row" data-decide-img="7">
+              <img class="decide-thumb" src="images/americano.jpg" alt="Hot americano coffee in a Panera cup" loading="lazy">
               <div class="decide-goal">Coffee that isn&rsquo;t dessert</div>
               <div class="decide-order">Americano <span class="dp">$3.81</span></div>
               <p class="decide-why">5 cal. The lattes run 130&ndash;380 cal.</p>
@@ -667,6 +690,12 @@
         </div>
       </section>
     </main>
+
+      <section class="credit-block" aria-label="Image credits">
+        <div class="wrap">
+          <p><strong>Image credits:</strong> All food photography on this site is the property of Panera Bread and is used for informational purposes only. panera-menus.us is an independent guide and is not affiliated with, endorsed by, or sponsored by Panera Bread.</p>
+        </div>
+      </section>
 
     <footer>
       <div class="wrap">
