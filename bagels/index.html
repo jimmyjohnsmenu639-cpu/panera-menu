@@ -158,6 +158,18 @@ h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0 0 .6rem;font-weight:
 /* FAQ */
 .faq-list{max-width:46rem;margin:0 auto;display:grid;gap:.7rem;padding:0;list-style:none}.faq{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow);overflow:hidden}.faq-q{width:100%;text-align:left;cursor:pointer;background:none;border:none;font:inherit;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.05rem 1.25rem;font-weight:600;font-size:1.02rem}.faq-q .pm{flex:none;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--bg-alt);color:var(--accent-text);display:grid;place-items:center;transition:transform .2s ease}.faq-q[aria-expanded="true"] .pm{transform:rotate(45deg)}.faq-a{padding:0 1.25rem;max-height:0;overflow:hidden;transition:max-height .25s ease}.faq-a p{margin:0 0 1.15rem;color:var(--text-soft)}
 footer{background:var(--deep-band);color:#D9D0B8;padding:2.75rem 0 2rem;font-size:.9rem}footer .wrap{display:grid;gap:1.75rem}.foot-brand{font-family:var(--serif);font-weight:700;font-size:1.35rem;color:#fff}.foot-brand b{color:var(--gold)}.foot-links{display:flex;flex-wrap:wrap;gap:1.25rem}.foot-links a{color:#D9D0B8;text-decoration:none}.foot-links a:hover{color:var(--gold)}.disclaimer{color:#A99F88;font-size:.83rem;border-top:1px solid rgba(217,164,65,.25);padding-top:1.25rem}.disclaimer p{margin:0 0 .5rem}.disclaimer p:last-child{margin:0}
+
+/* ============ IMAGES (2026-10-08) ============ */
+.hero-img { margin: 0; }
+.hero-img img { width: 100%; height: auto; border-radius: 16px; display: block; }
+.decide-row::after { content: ""; display: table; clear: both; }
+.decide-thumb { width: 104px; height: 78px; object-fit: cover; border-radius: 10px; float: right; margin: 0 0 .6rem 1rem; }
+.cat-hero { margin: 1.6rem 0 0; }
+.cat-hero img { width: 100%; height: auto; border-radius: 16px; display: block; }
+.img-credit { font-size: .78rem; }
+.credit-block { background: var(--surface-warm); border-top: 1px solid var(--line); padding: 1.4rem 0; font-size: .86rem; color: #8d8471; }
+.credit-block p { margin: 0; }
+@media (max-width: 640px) { .decide-thumb { width: 84px; height: 64px; } }
 </style>
 <script type="application/ld+json">
 {
@@ -649,7 +661,8 @@ footer{background:var(--deep-band);color:#D9D0B8;padding:2.75rem 0 2rem;font-siz
       <span class="hpoint"><b>$18.46</b> Bagel Pack vs $25.74 in singles</span>
     </div>
     <p class="verify-strip"><b>How to read the labels:</b> bagel, pack, and spread prices and nutrition come from Panera&rsquo;s published menu information. Tuesday prices change by cafe and week, apply only where offered, and should be confirmed in the Panera app.</p>
-  </div>
+      <figure class="cat-hero"><img src="../images/cat-bagels.jpg" alt="Assortment of Panera bagels" loading="lazy"></figure>
+</div>
 </section>
 
 <section aria-labelledby="contrast-title" style="padding-top:.5rem">
