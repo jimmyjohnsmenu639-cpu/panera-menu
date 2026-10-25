@@ -309,6 +309,18 @@
       .disclaimer { color: #A99F88; font-size: .83rem; border-top: 1px solid rgba(217,164,65,.25); padding-top: 1.25rem; }
       .disclaimer p { margin: 0 0 .5rem; }
       .disclaimer p:last-child { margin: 0; }
+
+    /* ============ IMAGES (2026-10-08) ============ */
+    .hero-img { margin: 0; }
+    .hero-img img { width: 100%; height: auto; border-radius: 16px; display: block; }
+    .decide-row::after { content: ""; display: table; clear: both; }
+    .decide-thumb { width: 104px; height: 78px; object-fit: cover; border-radius: 10px; float: right; margin: 0 0 .6rem 1rem; }
+    .cat-hero { margin: 1.6rem 0 0; }
+    .cat-hero img { width: 100%; height: auto; border-radius: 16px; display: block; }
+    .img-credit { font-size: .78rem; }
+    .credit-block { background: var(--surface-warm); border-top: 1px solid var(--line); padding: 1.4rem 0; font-size: .86rem; color: #8d8471; }
+    .credit-block p { margin: 0; }
+    @media (max-width: 640px) { .decide-thumb { width: 84px; height: 64px; } }
     </style>
   <script type="application/ld+json">
 {
@@ -1051,6 +1063,7 @@
             <a class="quick-chip" href="#lowest-sodium"><span class="qm">970&nbsp;mg</span><span class="qx"><strong>Lowest sodium</strong>Cranberry Walnut Chicken Salad &middot; $9.23</span></a>
           </div>
           <p class="trust">Independent guide, not affiliated with Panera.</p>
+          <figure class="cat-hero"><img src="../images/cat-sandwiches.jpg" alt="Toasted Panera sandwiches cut in half showing fillings" loading="lazy"></figure>
         </div>
       </section>
 
