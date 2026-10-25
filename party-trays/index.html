@@ -242,6 +242,18 @@ footer{background:var(--deep-band);color:#D9D0B8;padding:2.75rem 0 2rem;font-siz
 .fp-row .fp-k{font-size:.78rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-text);padding-top:.2rem}
 .fp-row p{margin:0;color:var(--text-soft);font-size:.95rem}
 .fp-row p b{color:var(--text)}
+
+/* ============ IMAGES (2026-10-08) ============ */
+.hero-img { margin: 0; }
+.hero-img img { width: 100%; height: auto; border-radius: 16px; display: block; }
+.decide-row::after { content: ""; display: table; clear: both; }
+.decide-thumb { width: 104px; height: 78px; object-fit: cover; border-radius: 10px; float: right; margin: 0 0 .6rem 1rem; }
+.cat-hero { margin: 1.6rem 0 0; }
+.cat-hero img { width: 100%; height: auto; border-radius: 16px; display: block; }
+.img-credit { font-size: .78rem; }
+.credit-block { background: var(--surface-warm); border-top: 1px solid var(--line); padding: 1.4rem 0; font-size: .86rem; color: #8d8471; }
+.credit-block p { margin: 0; }
+@media (max-width: 640px) { .decide-thumb { width: 84px; height: 64px; } }
 </style>
 </head>
 <body>
@@ -301,7 +313,8 @@ footer{background:var(--deep-band);color:#D9D0B8;padding:2.75rem 0 2rem;font-siz
       <span class="hpoint"><b>40 to 50%</b> saved with trays</span>
     </div>
     <p class="fresh-strip"><b>How to read this page:</b> a green tag means the price is verified against our 9-city menu numbers checked September 30, 2026. A rust tag means typical: the figure comes from published cafe menus and catering listings, it varies by cafe, and you should confirm it when you order. Nothing on this page invents a tray price.</p>
-  </div>
+      <figure class="cat-hero"><img src="../images/cat-party-trays.jpg" alt="Panera party sandwich tray" loading="lazy"></figure>
+</div>
 </section>
 
 <section id="decide" aria-labelledby="decide-title">
