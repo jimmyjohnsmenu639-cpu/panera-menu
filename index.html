@@ -386,6 +386,12 @@
     .credit-block { background: var(--surface-warm); border-top: 1px solid var(--line); padding: 1.4rem 0; font-size: .86rem; color: #8d8471; }
     .credit-block p { margin: 0; }
     @media (max-width: 640px) { .decide-thumb { width: 84px; height: 64px; } }
+
+      /* ============ CARD PHOTOS (2026-10-25) ============ */
+      .card-photo { margin: 0 0 .9rem; }
+      .card-photo img { width: 100%; height: 170px; object-fit: cover; border-radius: 10px; display: block; }
+      .cat-sec-photo { margin: 0 0 1.25rem; }
+      .cat-sec-photo img { width: 100%; height: 240px; object-fit: cover; border-radius: 16px; display: block; }
     </style>
   </head>
   <body>
@@ -970,17 +976,23 @@ var META = {"tool_universe": 99, "universe_rule": "single-serve meals: protein >
     if (cal === null && pro === null && sod === null) return '<li class="chip" title="Panera does not publish nutrition for bundles">price only</li>';
     if (cal !== null) out.push('<li class="chip' + (cal > 1000 ? ' hot' : '') + '">' + fmt(cal) + ' cal</li>');
     if (pro !== null) out.push('<li class="chip">' + fmt(pro) + 'g pro</li>');
-    if (sod !== null) out.push('<li class="chip' + (sod > SOD_DV ? ' hot' : '') + '">' + fmt(sod) + 'mg sod</li>');
+
     return out.join('');
   }
 
+  var ITEM_PHOTOS = {"French Ciabatta Dipper": "french-ciabatta-dipper.jpg", "Chicken Pesto Ciabatta Dipper": "chicken-pesto-ciabatta-dipper.jpg", "Homestyle Chicken Noodle Soup": "homestyle-chicken-noodle-soup.jpg", "Greek Yogurt with Berries Parfait": "greek-yogurt-berries-parfait.jpg", "Farmhouse Duo Asiago Bagel Stack": "farmhouse-duo-asiago-bagel-stack.jpg", "Kids Turkey & Cheese Sandwich": "kids-turkey-cheese.jpg", "Americano": "americano.jpg", "Broccoli Cheddar Soup": "cat-soups.jpg", "Green Goddess Chicken Cobb Salad": "cat-salads.jpg", "Caffe Latte": "cat-coffee.jpg", "Mediterranean Veggie": "cat-vegan.jpg", "Farmhouse Crunch Salad": "cat-nutrition.jpg", "Greek Salad": "cat-gluten-free.jpg"};
+  var SEC_PHOTOS = {"hot-sandwiches": "cat-sandwiches.jpg", "cold-sandwiches": "cat-vegan.jpg", "salads": "cat-nutrition.jpg", "salad-stuffers": "cat-healthy.jpg", "soups-and-mac": "cat-soups.jpg", "bread-bowls": "cat-soups.jpg", "egg-sandwiches": "cat-breakfast.jpg", "parfaits-fruit-and-oatmeal": "greek-yogurt-berries-parfait.jpg", "bagels": "cat-bagels.jpg", "kids": "kids-turkey-cheese.jpg", "espresso-bar": "cat-coffee.jpg", "teas-lemonades-and-refreshers": "cat-drinks.jpg", "catering-and-group": "cat-catering.jpg"};
   function itemCardHTML(it) {
     var chips = chip3(it.cal, it.pro, it.sod);
-    if (it.ppd !== null && it.ppd !== undefined) chips += '<li class="chip ppd">' + it.ppd + 'g/$</li>';
+    var photo = ITEM_PHOTOS[it.n]
+      ? '<figure class="card-photo"><img src="images/' + ITEM_PHOTOS[it.n] + '" alt="' + esc(it.n) + '" loading="lazy"></figure>'
+      : '';
+
+
     var nut = (it.cal !== null && it.cal !== undefined)
       ? '<span itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation" hidden><meta itemprop="calories" content="' + it.cal + ' calories" /></span>'
       : '';
-    return '<article class="card item" itemscope itemtype="https://schema.org/MenuItem">' +
+    return '<article class="card item" itemscope itemtype="https://schema.org/MenuItem">' + photo +
       '<div class="item-head"><h3 itemprop="name">' + esc(it.n) + '</h3>' +
       '<span class="price-tag" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="USD" /><span itemprop="price" content="' + it.p + '">' + money(it.p) + '</span></span></div>' +
       '<ul class="chips">' + chips + '</ul>' +
@@ -1003,7 +1015,8 @@ var META = {"tool_universe": 99, "universe_rule": "single-serve meals: protein >
       meta += ' &middot; ' + (shown === c.n ? 'all ' + shown + ' here' : shown + ' picks below');
       secs.push('<!-- ==== ' + pad(n) + ' ' + c.name.replace(/-/g, ' ') + ' ==== -->\n' +
         '<section class="cat-sec' + (n % 2 === 0 ? ' altsec' : '') + '" id="' + c.slug + '" aria-labelledby="' + c.slug + '-h">\n' +
-        '<!-- photo: ' + esc(c.name) + ' - category photo would go here -->' +
+        '<!-- photo: ' + esc(c.name) + ' -->' +
+        (SEC_PHOTOS[c.slug] ? '<figure class="cat-sec-photo"><img src="images/' + SEC_PHOTOS[c.slug] + '" alt="' + esc(c.name) + '" loading="lazy"></figure>' : '') +
         '<div class="wrap">' +
         '<div class="cat-head"><span class="cat-num" aria-hidden="true">' + pad(n) + '</span>' +
         '<div><h2 id="' + c.slug + '-h">' + esc(c.name) + '</h2><p class="cat-meta">' + meta + '</p></div></div>' +
